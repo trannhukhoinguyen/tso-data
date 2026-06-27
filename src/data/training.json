@@ -1,0 +1,461 @@
+[
+  {
+    "lvlChar": 1,
+    "lvlNpc": 25,
+    "elementName": "Địa",
+    "npcId": 10189,
+    "mapId": 11811,
+    "x": 1582,
+    "y": 975
+  },
+  {
+    "lvlChar": 27,
+    "lvlNpc": 56,
+    "elementName": "Địa",
+    "npcId": 10090,
+    "mapId": 11822,
+    "x": 2062,
+    "y": 555
+  },
+  {
+    "lvlChar": 51,
+    "lvlNpc": 80,
+    "elementName": "Địa",
+    "npcId": 10095,
+    "mapId": 11822,
+    "x": 722,
+    "y": 555
+  },
+  {
+    "lvlChar": 62,
+    "lvlNpc": 91,
+    "elementName": "Địa",
+    "npcId": 17058,
+    "mapId": 21831,
+    "x": 2042,
+    "y": 955
+  },
+  {
+    "lvlChar": 77,
+    "lvlNpc": 106,
+    "elementName": "Địa",
+    "npcId": 17343,
+    "mapId": 21891,
+    "x": 622,
+    "y": 1595
+  },
+  {
+    "lvlChar": 84,
+    "lvlNpc": 113,
+    "elementName": "Địa",
+    "npcId": 17356,
+    "mapId": 21861,
+    "x": 3702,
+    "y": 415
+  },
+  {
+    "lvlChar": 89,
+    "lvlNpc": 118,
+    "elementName": "Địa",
+    "npcId": 17347,
+    "mapId": 21872,
+    "x": 1782,
+    "y": 775
+  },
+  {
+    "lvlChar": 108,
+    "lvlNpc": 137,
+    "elementName": "Địa",
+    "npcId": 17039,
+    "mapId": 21812,
+    "x": 762,
+    "y": 1955
+  },
+  {
+    "lvlChar": 113,
+    "lvlNpc": 142,
+    "elementName": "Địa",
+    "npcId": 17353,
+    "mapId": 21852,
+    "x": 1922,
+    "y": 1275
+  },
+  {
+    "lvlChar": 119,
+    "lvlNpc": 148,
+    "elementName": "Địa",
+    "npcId": 17415,
+    "mapId": 21844,
+    "x": 882,
+    "y": 1695
+  },
+  {
+    "lvlChar": 124,
+    "lvlNpc": 153,
+    "elementName": "Địa",
+    "npcId": 17420,
+    "mapId": 23872,
+    "x": 622,
+    "y": 1975
+  },
+  {
+    "lvlChar": 134,
+    "lvlNpc": 163,
+    "elementName": "Địa",
+    "npcId": 17401,
+    "mapId": 23803,
+    "x": 1562,
+    "y": 495
+  },
+  {
+    "lvlChar": 141,
+    "lvlNpc": 170,
+    "elementName": "Địa",
+    "npcId": 17546,
+    "mapId": 25882,
+    "x": 1062,
+    "y": 615
+  },
+  {
+    "lvlChar": 146,
+    "lvlNpc": 175,
+    "elementName": "Địa",
+    "npcId": 17553,
+    "mapId": 25812,
+    "x": 542,
+    "y": 2575
+  },
+  {
+    "lvlChar": 151,
+    "lvlNpc": 180,
+    "elementName": "Địa",
+    "npcId": 17562,
+    "mapId": 25813,
+    "x": 1902,
+    "y": 795
+  },
+  {
+    "lvlChar": 68,
+    "lvlNpc": 97,
+    "elementName": "Phong",
+    "npcId": 17225,
+    "mapId": 21832,
+    "x": 1942,
+    "y": 735
+  },
+  {
+    "lvlChar": 76,
+    "lvlNpc": 105,
+    "elementName": "Phong",
+    "npcId": 17342,
+    "mapId": 21891,
+    "x": 1502,
+    "y": 675
+  },
+  {
+    "lvlChar": 93,
+    "lvlNpc": 122,
+    "elementName": "Phong",
+    "npcId": 17361,
+    "mapId": 21864,
+    "x": 3722,
+    "y": 715
+  },
+  {
+    "lvlChar": 104,
+    "lvlNpc": 133,
+    "elementName": "Phong",
+    "npcId": 17036,
+    "mapId": 21811,
+    "x": 502,
+    "y": 695
+  },
+  {
+    "lvlChar": 114,
+    "lvlNpc": 143,
+    "elementName": "Phong",
+    "npcId": 17409,
+    "mapId": 23822,
+    "x": 442,
+    "y": 795
+  },
+  {
+    "lvlChar": 121,
+    "lvlNpc": 150,
+    "elementName": "Phong",
+    "npcId": 17412,
+    "mapId": 23841,
+    "x": 662,
+    "y": 775
+  },
+  {
+    "lvlChar": 131,
+    "lvlNpc": 160,
+    "elementName": "Phong",
+    "npcId": 17424,
+    "mapId": 23861,
+    "x": 2622,
+    "y": 815
+  },
+  {
+    "lvlChar": 140,
+    "lvlNpc": 169,
+    "elementName": "Phong",
+    "npcId": 17432,
+    "mapId": 23806,
+    "x": 1082,
+    "y": 815
+  },
+  {
+    "lvlChar": 147,
+    "lvlNpc": 176,
+    "elementName": "Phong",
+    "npcId": 17554,
+    "mapId": 25812,
+    "x": 602,
+    "y": 1575
+  },
+  {
+    "lvlChar": 149,
+    "lvlNpc": 178,
+    "elementName": "Phong",
+    "npcId": 17558,
+    "mapId": 25894,
+    "x": 902,
+    "y": 2835
+  },
+  {
+    "lvlChar": 151,
+    "lvlNpc": 180,
+    "elementName": "Phong",
+    "npcId": 17560,
+    "mapId": 25891,
+    "x": 2342,
+    "y": 895
+  },
+  {
+    "lvlChar": 69,
+    "lvlNpc": 98,
+    "elementName": "Thủy",
+    "npcId": 17072,
+    "mapId": 21833,
+    "x": 2622,
+    "y": 875
+  },
+  {
+    "lvlChar": 80,
+    "lvlNpc": 109,
+    "elementName": "Thủy",
+    "npcId": 17345,
+    "mapId": 21871,
+    "x": 1242,
+    "y": 555
+  },
+  {
+    "lvlChar": 91,
+    "lvlNpc": 120,
+    "elementName": "Thủy",
+    "npcId": 17346,
+    "mapId": 21872,
+    "x": 1942,
+    "y": 2215
+  },
+  {
+    "lvlChar": 101,
+    "lvlNpc": 130,
+    "elementName": "Thủy",
+    "npcId": 17363,
+    "mapId": 21863,
+    "x": 1302,
+    "y": 595
+  },
+  {
+    "lvlChar": 106,
+    "lvlNpc": 135,
+    "elementName": "Thủy",
+    "npcId": 17407,
+    "mapId": 23821,
+    "x": 1962,
+    "y": 1035
+  },
+  {
+    "lvlChar": 111,
+    "lvlNpc": 140,
+    "elementName": "Thủy",
+    "npcId": 17404,
+    "mapId": 23812,
+    "x": 1662,
+    "y": 655
+  },
+  {
+    "lvlChar": 120,
+    "lvlNpc": 149,
+    "elementName": "Thủy",
+    "npcId": 17411,
+    "mapId": 23831,
+    "x": 2282,
+    "y": 1075
+  },
+  {
+    "lvlChar": 126,
+    "lvlNpc": 155,
+    "elementName": "Thủy",
+    "npcId": 17528,
+    "mapId": 25842,
+    "x": 1142,
+    "y": 1055
+  },
+  {
+    "lvlChar": 131,
+    "lvlNpc": 160,
+    "elementName": "Thủy",
+    "npcId": 17530,
+    "mapId": 25843,
+    "x": 1702,
+    "y": 855
+  },
+  {
+    "lvlChar": 134,
+    "lvlNpc": 163,
+    "elementName": "Thủy",
+    "npcId": 17536,
+    "mapId": 25851,
+    "x": 582,
+    "y": 2075
+  },
+  {
+    "lvlChar": 142,
+    "lvlNpc": 171,
+    "elementName": "Thủy",
+    "npcId": 17549,
+    "mapId": 25802,
+    "x": 682,
+    "y": 1355
+  },
+  {
+    "lvlChar": 147,
+    "lvlNpc": 176,
+    "elementName": "Thủy",
+    "npcId": 17552,
+    "mapId": 25895,
+    "x": 582,
+    "y": 815
+  },
+  {
+    "lvlChar": 150,
+    "lvlNpc": 179,
+    "elementName": "Thủy",
+    "npcId": 17559,
+    "mapId": 25891,
+    "x": 3582,
+    "y": 875
+  },
+  {
+    "lvlChar": 66,
+    "lvlNpc": 95,
+    "elementName": "Hỏa",
+    "npcId": 17064,
+    "mapId": 21833,
+    "x": 562,
+    "y": 835
+  },
+  {
+    "lvlChar": 71,
+    "lvlNpc": 100,
+    "elementName": "Hỏa",
+    "npcId": 17332,
+    "mapId": 21882,
+    "x": 682,
+    "y": 2015
+  },
+  {
+    "lvlChar": 83,
+    "lvlNpc": 112,
+    "elementName": "Hỏa",
+    "npcId": 17402,
+    "mapId": 23811,
+    "x": 522,
+    "y": 495
+  },
+  {
+    "lvlChar": 97,
+    "lvlNpc": 126,
+    "elementName": "Hỏa",
+    "npcId": 17397,
+    "mapId": 21826,
+    "x": 2062,
+    "y": 815
+  },
+  {
+    "lvlChar": 103,
+    "lvlNpc": 132,
+    "elementName": "Hỏa",
+    "npcId": 17035,
+    "mapId": 21811,
+    "x": 1362,
+    "y": 475
+  },
+  {
+    "lvlChar": 110,
+    "lvlNpc": 139,
+    "elementName": "Hỏa",
+    "npcId": 17040,
+    "mapId": 21812,
+    "x": 1602,
+    "y": 1215
+  },
+  {
+    "lvlChar": 119,
+    "lvlNpc": 148,
+    "elementName": "Hỏa",
+    "npcId": 17048,
+    "mapId": 21844,
+    "x": 822,
+    "y": 355
+  },
+  {
+    "lvlChar": 126,
+    "lvlNpc": 155,
+    "elementName": "Hỏa",
+    "npcId": 17394,
+    "mapId": 21837,
+    "x": 562,
+    "y": 1615
+  },
+  {
+    "lvlChar": 133,
+    "lvlNpc": 162,
+    "elementName": "Hỏa",
+    "npcId": 17538,
+    "mapId": 25831,
+    "x": 1162,
+    "y": 1135
+  },
+  {
+    "lvlChar": 142,
+    "lvlNpc": 171,
+    "elementName": "Hỏa",
+    "npcId": 17547,
+    "mapId": 25896,
+    "x": 642,
+    "y": 995
+  },
+  {
+    "lvlChar": 146,
+    "lvlNpc": 175,
+    "elementName": "Hỏa",
+    "npcId": 17551,
+    "mapId": 25895,
+    "x": 962,
+    "y": 675
+  },
+  {
+    "lvlChar": 150,
+    "lvlNpc": 179,
+    "elementName": "Hỏa",
+    "npcId": 17561,
+    "mapId": 25813,
+    "x": 722,
+    "y": 1475
+  }
+]

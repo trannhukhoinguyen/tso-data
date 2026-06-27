@@ -4,7 +4,8 @@ import Breadcrumbs from "../../components/ui/Breadcrumbs.astro";
 import ProductGallery from "../../components/products/ProductGallery.astro";
 import ProductInfo from "../../components/products/ProductInfo.astro";
 import CardProduct from "../../components/products/CardProduct.astro";
-import { products, getRelatedProducts } from "../../data/products";
+import { products } from "../../data/product/products";
+import { getRelatedProducts } from "../../utils/helpers";
 
 export async function getStaticPaths() {
     return products.map((product) => ({
