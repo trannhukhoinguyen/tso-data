@@ -2,28 +2,31 @@
 import { Icon } from "astro-icon/components";
 
 const categories = [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "/", color: "" },
     {
-        name: "Computers",
-        href: "/category/computers",
+        name: "Move",
+        href: "/map",
         subcategories: [
-            { name: "All", href: "/category/computers" },
-            { name: "Notebooks", href: "/category/computers?sub=notebooks" },
-            { name: "Keyboards", href: "/category/computers?sub=keyboards" },
-            { name: "Monitors", href: "/category/computers?sub=monitors" },
+            { name: "Bản đồ", href: "/map", color: "amber" },
+            { name: "Bãi Quái", href: "/", color: "blue" },
+            { name: "Tọa độ", href: "/warp", color: "indigo" },
+            { name: "Training", href: "/training", color: "rose" },
         ],
     },
     {
-        name: "Phones",
-        href: "/category/phones",
+        name: "NPC",
+        href: "/npc",
         subcategories: [
-            { name: "All", href: "/category/phones" },
-            { name: "Android", href: "/category/phones?sub=android" },
-            { name: "iPhone", href: "/category/phones?sub=iphone" },
+            { name: "All", href: "/npc", color: "silver" },
+            { name: "Địa", href: "/npc?element=earth", color: "brown" },
+            { name: "Thủy", href: "/npc?element=water", color: "blue" },
+            { name: "Hỏa", href: "/npc?element=fire", color: "red" },
+            { name: "Phong", href: "/npc?element=wind", color: "green" },
         ],
     },
-    { name: "Audio", href: "/category/audio" },
-    { name: "Accessories", href: "/category/accessories" },
+    { name: "Vật phẩm", href: "/items", color: "orange" },
+    { name: "Nhiệm vụ", href: "/quests", color: "zinc" },
+    { name: "Kỹ Năng", href: "/skills", color: "purple" },
 ];
 ---
 
@@ -39,7 +42,7 @@ const categories = [
                 id="mobile-links-toggle"
                 class="flex items-center gap-2 h-full px-2 hover:bg-white/10 transition-colors cursor-pointer"
             >
-                <span>Categories</span>
+                <span>Bạn tìm gì?</span>
                 <Icon
                     name="lucide:chevron-down"
                     id="chevron-icon"
@@ -47,13 +50,13 @@ const categories = [
                 />
             </button>
 
-            <div class="flex h-full items-center">
+<!--            <div class="flex h-full items-center">
                 <a
                     href="/contact"
                     class="flex items-center h-full px-2 hover:bg-white/10 transition-colors"
                     >Contact</a
                 >
-            </div>
+            </div>-->
         </div>
 
         <!-- Desktop: Left Side (Mapped Categories) -->
@@ -102,7 +105,7 @@ const categories = [
         </div>
 
         <!-- Desktop: Right Side -->
-        <div class="hidden sm:flex h-full items-center">
+<!--        <div class="hidden sm:flex h-full items-center">
             <a
                 href="/about"
                 class="flex items-center h-full px-4 hover:bg-white/10 text-white/90 hover:text-white transition-all cursor-pointer"
@@ -118,7 +121,7 @@ const categories = [
                 class="flex items-center h-full px-4 hover:bg-white/10 text-white/90 hover:text-white transition-all cursor-pointer"
                 >Contact</a
             >
-        </div>
+        </div>-->
     </div>
 
     <!-- Mobile Dropdown Menu -->
@@ -156,7 +159,7 @@ const categories = [
                     </>
                 ))
             }
-            <div
+<!--            <div
                 class="bg-primary/50 py-2 px-6 text-white/60 uppercase text-[10px] tracking-widest font-bold"
             >
                 More Info
@@ -170,7 +173,7 @@ const categories = [
                 href="/blog"
                 class="py-3 px-6 hover:bg-white/10 border-b border-white/5 transition-colors"
                 >Our Blog</a
-            >
+            >-->
         </div>
     </div>
 </div>

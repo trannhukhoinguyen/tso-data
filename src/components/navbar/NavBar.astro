@@ -15,8 +15,8 @@ import Links from "./Links.astro";
                     <div
                         class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform shadow-sm"
                     >
-                        <Icon
-                            name="lucide:shopping-bag"
+                        <img
+                            src="/favicon.svg"
                             class="w-5 h-5 text-primary-content"
                         />
                     </div>
@@ -36,13 +36,14 @@ import Links from "./Links.astro";
             <!-- Right Side: Icons -->
             <div class="navbar-end gap-2 sm:gap-4">
                 <a
-                    href="/favorites"
+                    href="/my-npc"
                     class="btn btn-ghost btn-circle hover:bg-primary/10 transition-colors"
-                    aria-label="Favorites"
+                    aria-label="My NPC"
+                    title="My NPC"
                 >
                     <div class="indicator">
                         <Icon
-                            name="lucide:heart"
+                            name="lucide:user-star"
                             class="w-6 h-6 hover:text-primary transition-colors"
                         />
                         <span
@@ -52,14 +53,15 @@ import Links from "./Links.astro";
                         >
                     </div>
                 </a>
-                <button
-                    id="cart-button"
+                <a
+                    href="/my-artifacts"
                     class="btn btn-ghost btn-circle hover:bg-primary/10 transition-colors"
-                    aria-label="Shopping Cart"
+                    aria-label="My Artifacts"
+                    title="My Artifacts"
                 >
                     <div class="indicator">
                         <Icon
-                            name="lucide:shopping-cart"
+                            name="lucide:book-heart"
                             class="w-6 h-6 hover:text-primary transition-colors"
                         />
                         <span
@@ -68,7 +70,7 @@ import Links from "./Links.astro";
                             >0</span
                         >
                     </div>
-                </button>
+                </a>
             </div>
         </nav>
     </div>
