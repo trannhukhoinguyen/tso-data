@@ -1,15 +1,15 @@
 ---
 import MainLayout from '../layouts/Layout.astro';
-// Đưa thẳng file JSON tĩnh thành một URL để client tự fetch (vừa nhẹ HTML vừa mượt)
-import npcsJsonUrl from '../data/npcs.json?url';
+// Đưa file JSON tĩnh thành một URL để phía Client tự fetch (giúp tải trang siêu mượt)
+import outputMapsUrl from '../data/new_set_monster_maps.json?url';
 ---
 
-<MainLayout title="Tra cứu NPC - TS Online">
+<MainLayout title="Tra cứu BÃI QUÁI - TS Online">
     <div class="border-b border-gray-700 bg-slate-900 sticky top-0 z-10">
         <div class="max-w-7xl mx-auto flex space-x-4 p-4">
-            <a href="/" class="px-4 py-2 rounded text-green-300 hover:bg-slate-800">NPC</a>
+            <a href="/" class="px-4 py-2 rounded bg-blue-600 text-white font-medium">Bãi Quái</a>
+            <a href="/npc" class="px-4 py-2 rounded text-green-300 hover:bg-slate-800">NPC</a>
             <a href="/items" class="px-4 py-2 rounded text-orange-300 hover:bg-slate-800">Vật Phẩm</a>
-            <a href="/monsters" class="px-4 py-2 rounded bg-blue-600 text-white font-medium">Bãi Quái</a>
             <a href="/map" class="px-4 py-2 rounded text-red-300 hover:bg-slate-800">Bản Đồ</a>
             <a href="/skills" class="px-4 py-2 rounded text-purple-300 hover:bg-slate-800">Kỹ Năng</a>
             <a href="/warp" class="px-4 py-2 rounded text-indigo-300 hover:bg-slate-800">Warp</a>
@@ -19,14 +19,15 @@ import npcsJsonUrl from '../data/npcs.json?url';
     </div>
 
     <main class="max-w-7xl mx-auto p-4 text-white">
-        <h1 class="text-2xl font-bold mb-4">Danh sách NPC (Gộp trùng tên)</h1>
+        <h1 class="text-2xl font-bold mb-2">Danh sách BÃI QUÁI</h1>
+        <p class="text-sm text-gray-400 mb-6">Dữ liệu được làm phẳng từ phân cấp Vùng ➔ Bản đồ ➔ Khu vực ➔ Quái vật.</p>
 
-        <div class="flex flex-col md:flex-row gap-4 mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <input
                     type="text"
                     id="search-input"
-                    placeholder="Nhập tên NPC cần tìm..."
-                    class="flex-1 bg-slate-800 text-white border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
+                    placeholder="Tìm quái, tên map, vùng (Ví dụ: Phi tặc, Liêu Đông)..."
+                    class="bg-slate-800 text-white border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
             />
 
             <select
@@ -39,45 +40,65 @@ import npcsJsonUrl from '../data/npcs.json?url';
                 <option value="Hỏa">Hỏa</option>
                 <option value="Phong">Phong</option>
             </select>
+
+            <select
+                    id="level-range-filter"
+                    class="bg-slate-800 text-white border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
+            >
+                <option value="">Tất cả Level</option>
+                <option value="0-9">Level 0 - 9</option>
+                <option value="10-19">Level 10 - 19</option>
+                <option value="20-29">Level 20 - 29</option>
+                <option value="30-39">Level 30 - 39</option>
+                <option value="40-49">Level 40 - 49</option>
+                <option value="50-59">Level 50 - 59</option>
+                <option value="60-69">Level 60 - 69</option>
+                <option value="70-79">Level 70 - 79</option>
+                <option value="80-89">Level 80 - 89</option>
+                <option value="90-99">Level 90 - 99</option>
+                <option value="100-109">Level 100 - 109</option>
+                <option value="110-119">Level 110 - 119</option>
+                <option value="120-129">Level 120 - 129</option>
+                <option value="130-139">Level 130 - 139</option>
+                <option value="140-149">Level 140 - 149</option>
+                <option value="150-159">Level 150 - 159</option>
+                <option value="160-169">Level 160 - 169</option>
+                <option value="170-179">Level 170 - 179</option>
+                <option value="180-189">Level 180 - 189</option>
+                <option value="190-199">Level 190 - 199</option>
+                <option value="200-250">Level 200+</option>
+            </select>
         </div>
 
         <div class="overflow-x-auto border border-gray-700 rounded-lg shadow bg-slate-900">
             <table class="min-w-full divide-y divide-gray-700 text-left text-sm">
                 <thead class="bg-slate-800 text-gray-300 uppercase font-semibold text-xs tracking-wider">
                 <tr>
-                    <th class="px-4 py-3">Tên NPC</th>
+                    <th class="px-4 py-3">Tên Quái (ID)</th>
                     <th class="px-4 py-3">Hệ</th>
                     <th class="px-4 py-3 text-center">Level</th>
                     <th class="px-4 py-3 text-center">HP</th>
-                    <th class="px-4 py-3 text-center">SP</th>
-                    <th class="px-4 py-3">Kỹ Năng</th>
-                    <th class="px-4 py-3">Bản Đồ Xuất Hiện (Map ID)</th>
+                    <th class="px-4 py-3">Bản Đồ Trong Game (ID)</th>
+                    <th class="px-4 py-3">Khu Vực Con (ID)</th>
+                    <th class="px-4 py-3 text-gray-400">Thuộc Vùng Vị Trí</th>
                 </tr>
                 </thead>
-                <tbody id="npc-table-body" class="divide-y divide-gray-800">
+                <tbody id="monster-table-body" class="divide-y divide-gray-800">
                 <tr>
-                    <td colspan="7" class="text-center py-8 text-gray-400">Đang tải dữ liệu NPC...</td>
+                    <td colspan="7" class="text-center py-8 text-gray-400">Đang chuẩn bị dữ liệu bãi quái...</td>
                 </tr>
                 </tbody>
             </table>
         </div>
 
         <div id="no-result" class="text-center text-gray-400 py-8 hidden">
-            Không tìm thấy NPC phù hợp với bộ lọc.
+            Không tìm thấy quái vật nào phù hợp với điều kiện lọc.
         </div>
     </main>
 </MainLayout>
 
-<script define:vars={{ npcsJsonUrl }}>
-    let groupedNpcs = [];
-
-    // Mảng màu đan xen dành cho các thẻ Map ID
-    const tagColors = [
-        'bg-gray-700 text-gray-200 border-gray-600',
-        'bg-slate-700 text-slate-200 border-slate-600',
-        'bg-zinc-700 text-zinc-200 border-zinc-600',
-        'bg-neutral-700 text-neutral-200 border-neutral-600'
-    ];
+<script define:vars={{ outputMapsUrl }}>
+    let flattenedMonsters = [];
 
     function removeVietnameseTones(str) {
         return str.normalize("NFD")
@@ -85,73 +106,63 @@ import npcsJsonUrl from '../data/npcs.json?url';
             .replace(/đ/g, "d").replace(/Đ/g, "D");
     }
 
-    // Khởi tạo tải dữ liệu và gộp các record trùng tên
     async function init() {
         try {
-            const response = await fetch(npcsJsonUrl);
+            const response = await fetch(outputMapsUrl);
             const rawData = await response.json();
 
-            // Sử dụng Map để gộp các NPC trùng tên
-            const npcMap = new Map();
+            // Thực hiện "Làm phẳng" (Flatten) cấu trúc dữ liệu JSON phân cấp lồng nhau
+            rawData.forEach(regionItem => {
+                const regionName = regionItem.region || "Chưa rõ";
+                const mapId = regionItem.map_id;
+                const mapName = regionItem.map_name;
 
-            rawData.forEach(npc => {
-                // Lấy danh sách ID bản đồ từ mảng locations của record này
-                const currentMapIds = npc.locations ? npc.locations.map(loc => loc.mapId) : [];
+                if (regionItem.sub_areas) {
+                    regionItem.sub_areas.forEach(subArea => {
+                        const areaId = subArea.area_id;
+                        const areaName = subArea.area_name;
 
-                if (npcMap.has(npc.name)) {
-                    // Nếu đã tồn tại NPC trùng tên, tiến hành gộp Map ID
-                    const existing = npcMap.get(npc.name);
-                    currentMapIds.forEach(id => {
-                        if (!existing.mapIds.includes(id)) {
-                            existing.mapIds.push(id);
+                        if (subArea.monsters) {
+                            subArea.monsters.forEach(monster => {
+                                // Đẩy thông tin tổng hợp ra thành cấu trúc 1 dòng dữ liệu phẳng
+                                flattenedMonsters.push({
+                                    monsterId: monster.monster_id,
+                                    name: monster.name,
+                                    element: monster.element || "Vô",
+                                    level: parseInt(monster.level) || 0,
+                                    hp: parseInt(monster.hp) || 0,
+                                    mapId: mapId,
+                                    mapName: mapName,
+                                    areaId: areaId,
+                                    areaName: areaName,
+                                    region: regionName
+                                });
+                            });
                         }
-                    });
-                } else {
-                    // Nếu chưa có, tạo bản ghi gộp mới
-                    npcMap.set(npc.name, {
-                        name: npc.name,
-                        elementName: npc.elementName || 'Vô',
-                        level: npc.level,
-                        hp: npc.hp,
-                        sp: npc.sp,
-                        skills: npc.skills || [],
-                        mapIds: currentMapIds
                     });
                 }
             });
 
-            // Chuyển Map thành mảng để thao tác tìm kiếm / hiển thị
-            groupedNpcs = Array.from(npcMap.values());
+            // Mặc định sắp xếp quái vật theo level tăng dần từ bé đến lớn
+            flattenedMonsters.sort((a, b) => a.level - b.level);
 
-            // Render 50 dòng đầu tiên lên table
-            renderTable(groupedNpcs.slice(0, 50));
+            // Render 60 dòng ban đầu để tối ưu trải nghiệm
+            renderTable(flattenedMonsters.slice(0, 60));
 
-            // Kích hoạt lắng nghe sự kiện
+            // Lắng nghe sự kiện từ các ô nhập / chọn bộ lọc
             document.getElementById('search-input').addEventListener('input', filterTable);
             document.getElementById('element-filter').addEventListener('change', filterTable);
+            document.getElementById('level-range-filter').addEventListener('change', filterTable);
 
         } catch (error) {
-            console.error("Lỗi khi load dữ liệu NPC:", error);
-            document.getElementById('npc-table-body').innerHTML = `<tr><td colspan="7" class="text-center py-8 text-red-400">Không thể tải dữ liệu.</td></tr>`;
+            console.error("Lỗi khi xử lý JSON quái vật:", error);
+            document.getElementById('monster-table-body').innerHTML = `<tr><td colspan="7" class="text-center py-8 text-red-400">Không thể tải dữ liệu bãi quái.</td></tr>`;
         }
     }
 
-    // Hàm sinh chuỗi các tag màu đan xen cho Map ID
-    function generateMapTags(mapIds) {
-        if (!mapIds || mapIds.length === 0) {
-            return `<span class="text-xs text-gray-500 italic">Không rõ nơi bắt</span>`;
-        }
-
-        return mapIds.map((id, index) => {
-            // Chọn màu đan xen tuần hoàn dựa trên vị trí index
-            const colorClass = tagColors[index % tagColors.length];
-            return `<span class="inline-block text-xs font-mono px-2 py-0.5 rounded border ${colorClass} mr-1 mb-1 shadow-sm">${id}</span>`;
-        }).join('');
-    }
-
-    // Hàm render dữ liệu mảng vào thẻ <tbody>
+    // Hàm render giao diện HTML vào thẻ <tbody>
     function renderTable(list) {
-        const tbody = document.getElementById('npc-table-body');
+        const tbody = document.getElementById('monster-table-body');
         const noResult = document.getElementById('no-result');
 
         if (list.length === 0) {
@@ -161,47 +172,80 @@ import npcsJsonUrl from '../data/npcs.json?url';
         }
         noResult.classList.add('hidden');
 
-        tbody.innerHTML = list.map(npc => {
-            // Định màu sắc riêng cho chữ của hệ tương ứng
-            let elementColor = 'text-amber-400'; // Địa
-            if (npc.elementName === 'Thủy') elementColor = 'text-blue-400';
-            if (npc.elementName === 'Hỏa') elementColor = 'text-red-400';
-            if (npc.elementName === 'Phong') elementColor = 'text-green-400';
-
-            // Xử lý render danh sách kỹ năng của NPC thành chuỗi ngắn gọn
-            const skillString = npc.skills.length > 0
-                ? npc.skills.map(s => s.name).join(', ')
-                : '<span class="text-gray-600">-</span>';
+        tbody.innerHTML = list.map(m => {
+            // Đổ màu theo thuộc tính hệ
+            let elColor = 'text-amber-400';
+            if (m.element === 'Thủy') elColor = 'text-blue-400';
+            if (m.element === 'Hỏa') elColor = 'text-red-400';
+            if (m.element === 'Phong') elColor = 'text-green-400';
 
             return `
-        <tr class="hover:bg-slate-800 transition-colors">
-          <td class="px-4 py-3 font-semibold text-yellow-400">${npc.name}</td>
-          <td class="px-4 py-3 font-medium ${elementColor}">${npc.elementName}</td>
-          <td class="px-4 py-3 text-center">${npc.level}</td>
-          <td class="px-4 py-3 text-center text-emerald-400">${npc.hp.toLocaleString()}</td>
-          <td class="px-4 py-3 text-center text-cyan-400">${npc.sp.toLocaleString()}</td>
-          <td class="px-4 py-3 text-gray-300 max-w-xs truncate" title="${skillString}">${skillString}</td>
-          <td class="px-4 py-3 max-w-md">${generateMapTags(npc.mapIds)}</td>
+        <tr class="hover:bg-slate-800/60 transition-colors">
+          <td class="px-4 py-3">
+            <span class="font-bold text-yellow-400">${m.name}</span>
+            <span class="text-xs text-gray-500 font-mono ml-1">#${m.monsterId}</span>
+          </td>
+          <td class="px-4 py-3 font-semibold ${elColor}">${m.element}</td>
+          <td class="px-4 py-3 text-center font-mono font-bold text-white">${m.level}</td>
+          <td class="px-4 py-3 text-center text-emerald-400 font-mono">${m.hp.toLocaleString()}</td>
+          <td class="px-4 py-3">
+            <span class="text-gray-200">${m.mapName}</span>
+            <span class="text-xs text-gray-500 font-mono block">ID: ${m.mapId}</span>
+          </td>
+          <td class="px-4 py-3">
+            <span class="text-gray-300 text-xs">${m.areaName}</span>
+            <span class="text-[11px] text-gray-500 font-mono block">Sub-ID: ${m.areaId}</span>
+          </td>
+          <td class="px-4 py-3 text-xs text-gray-400 font-medium">${m.region}</td>
         </tr>
       `;
         }).join('');
     }
 
-    // Hàm lọc tìm kiếm
+    // Hàm thực thi tìm kiếm & lọc khoảng 10 Level
     function filterTable() {
-        const keyword = removeVietnameseTones(document.getElementById('search-input').value.toLowerCase().trim());
+        const query = removeVietnameseTones(document.getElementById('search-input').value.toLowerCase().trim());
         const selectedElement = document.getElementById('element-filter').value;
+        const selectedLevelRange = document.getElementById('level-range-filter').value;
 
-        const filtered = groupedNpcs.filter(npc => {
-            const matchKeyword = removeVietnameseTones(npc.name.toLowerCase()).includes(keyword);
-            const matchElement = selectedElement === "" || npc.elementName === selectedElement;
-            return matchKeyword && matchElement;
+        const filtered = flattenedMonsters.filter(m => {
+            // 1. Check Tìm kiếm (Khớp tên quái, tên map hoặc tên vùng)
+            const textMatch = removeVietnameseTones(m.name.toLowerCase()).includes(query) ||
+                removeVietnameseTones(m.mapName.toLowerCase()).includes(query) ||
+                removeVietnameseTones(m.region.toLowerCase()).includes(query) ||
+                m.monsterId.toString().includes(query);
+
+            // 2. Check Hệ
+            const elementMatch = selectedElement === "" || m.element === selectedElement;
+
+            // 3. Check khoảng 10 level (Tách chuỗi ví dụ "100-109" thành min=100 và max=109)
+            let levelMatch = true;
+            if (selectedLevelRange !== "") {
+                const [minStr, maxStr] = selectedLevelRange.split('-');
+                const minLvl = parseInt(minStr);
+                const maxLvl = parseInt(maxStr);
+                levelMatch = m.level >= minLvl && m.level <= maxLvl;
+            }
+
+            return textMatch && elementMatch && levelMatch;
         });
 
-        // Giới hạn hiển thị 150 dòng để tối ưu UI mượt mà
-        renderTable(filtered.slice(0, 150));
+        // Chỉ hiển thị tối đa 200 dòng để trình duyệt xử lý mượt, tránh lag DOM khi gõ phím
+        renderTable(filtered.slice(0, 200));
     }
 
-    // Chạy ứng dụng
+    // Chạy ứng dụng khởi tạo
     init();
 </script>
+
+<style>
+    /* Tuỳ chỉnh thanh cuộn nhỏ cho gọn bảng */
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 4px;
+    }
+</style>
