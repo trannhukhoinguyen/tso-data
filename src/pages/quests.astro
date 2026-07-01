@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../layouts/Layout.astro';
 // Import trực tiếp dữ liệu JSON tại Server-side để truyền xuống Client
-import questJsonUrl from '../data/quests.json?url';
+import questJsonUrl from '../data/quests_dump1.json?url';
 import provincesData from '../data/provinces.json?url';
 ---
 
@@ -17,7 +17,7 @@ import provincesData from '../data/provinces.json?url';
                     class="flex-1 bg-slate-800 text-white border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
             />
 
-            <select
+<!--            <select
                     id="province-filter"
                     class="bg-slate-800 text-white border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
             >
@@ -27,7 +27,7 @@ import provincesData from '../data/provinces.json?url';
                 <option value="ky_chau">Ký Châu</option>
                 <option value="thanh_chau">Thanh Châu</option>
                 <option value="duong_chau">Dương Châu</option>
-            </select>
+            </select>-->
         </div>
 
         <div id="quest-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -183,13 +183,15 @@ import provincesData from '../data/provinces.json?url';
 
             return `
         <tr class="hover:bg-slate-800 transition-colors">
+          <td class="px-4 py-3 font-bold text-yellow-600">${quest.id}</td>
           <td class="px-4 py-3 font-semibold text-yellow-400">${quest.name}</td>
-          <td class="px-4 py-3 font-medium ${elementColor}">${quest.elementName}</td>
-          <td class="px-4 py-3 text-center">${quest.level}</td>
-          <td class="px-4 py-3 text-center text-emerald-400">${quest.hp.toLocaleString()}</td>
-          <td class="px-4 py-3 text-center text-cyan-400">${quest.sp.toLocaleString()}</td>
-          <td class="px-4 py-3 text-gray-300 max-w-xs truncate" title="${skillString}">${skillString}</td>
-          <td class="px-4 py-3 max-w-md">${generateMapTags(quest.mapIds)}</td>
+          <td class="px-4 py-3 font-medium ${elementColor}">${quest.description}</td>
+          ${
+            quest?.steps?.length 
+                ? quest?.steps?.map(step => <td
+                    className="px-4 py-3 font-medium ${elementColor}">${step}</td>)
+                : ''
+            }          
        </tr>
       `;
         }).join('');
