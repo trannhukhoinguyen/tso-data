@@ -1,0 +1,47 @@
+[
+  {
+    "id": "Durian",
+    "name": "Durian",
+    "icon": "/images/fruits/Durian-icon.png"
+  },
+  {
+    "id": "Dragon_fruit",
+    "name": "Dragon fruit",
+    "icon": "/images/fruits/Dragon_fruit-icon.png"
+  },
+  {
+    "id": "Mangosteen",
+    "name": "Mangosteen",
+    "icon": "/images/fruits/Mangosteen-icon.png"
+  },
+  {
+    "id": "Orange",
+    "name": "Orange",
+    "icon": "/images/fruits/Orange-icon.png"
+  },
+  {
+    "id": "Grape",
+    "name": "Grape",
+    "icon": "/images/fruits/Grape-icon.png"
+  },
+  {
+    "id": "Longan",
+    "name": "Longan",
+    "icon": "/images/fruits/Longan-icon.png"
+  },
+  {
+    "id": "Watermelon",
+    "name": "Watermelon",
+    "icon": "/images/fruits/Watermelon-icon.png"
+  },
+  {
+    "id": "Papaya",
+    "name": "Papaya",
+    "icon": "/images/fruits/Papaya-icon.png"
+  },
+  {
+    "id": "Green_apple",
+    "name": "Green apple",
+    "icon": "/images/fruits/Green_apple-icon.png"
+  }
+]

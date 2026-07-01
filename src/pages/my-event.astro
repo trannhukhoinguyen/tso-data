@@ -1,0 +1,225 @@
+---
+import Layout from "../layouts/Layout.astro";
+import fruits from '../data/events/fruits.json';
+---
+
+<Layout title="My Event | TS Online">
+    <div class="container mx-auto px-4 py-8 min-h-[60vh]">
+        <h1 class="text-3xl font-bold mb-8 flex items-center gap-2">
+            <span class="text-primary">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="transform transition-transform"
+                    ><path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    ></path></svg
+                >
+            </span>
+            My Event
+        </h1>
+
+        <main class="max-w-4xl mx-auto p-4 text-white">
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h1 class="text-2xl font-bold text-yellow-400">Nhiệm Vụ Thu Thập Trái Cây</h1>
+                    <p class="text-xs text-gray-400 mt-1">Nhập số lượng hiện có, hệ thống sẽ tự động lưu trữ.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+                    <button id="export-btn" class="flex-1 sm:flex-none bg-emerald-900/60 hover:bg-emerald-800 text-emerald-200 text-xs px-3 py-2 rounded border border-emerald-700 transition-colors flex items-center justify-center gap-1">
+                        📥 Xuất Dữ Liệu
+                    </button>
+
+                    <label for="import-file" class="flex-1 sm:flex-none bg-blue-900/60 hover:bg-blue-800 text-blue-200 text-xs px-3 py-2 rounded border border-blue-700 transition-colors flex items-center justify-center gap-1 cursor-pointer text-center">
+                        📤 Nhập Dữ Liệu
+                    </label>
+                    <input type="file" id="import-file" accept=".json" class="hidden" />
+
+                    <button id="reset-btn" class="flex-1 sm:flex-none bg-red-900/60 hover:bg-red-800 text-red-200 text-xs px-3 py-1.5 rounded border border-red-700 transition-colors">
+                        Reset Tất Cả
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-4">
+                {fruits.map((fruit) => (
+                        <div class="bg-slate-900 border border-gray-700 rounded-lg p-4 flex flex-col items-center justify-between shadow-md hover:border-gray-500 transition-all">
+
+                            <div class="text-5xl my-2 select-none filter drop-shadow-md">
+                                <img
+                                  src={fruit.icon}
+                                />
+                            </div>
+
+                            <div class="text-sm font-medium text-gray-300 mb-3">{fruit.name}</div>
+
+                            <div class="w-full bg-slate-950/80 rounded-md p-2 border border-slate-800 flex flex-col items-center">
+
+                                <div id={`status-${fruit.id}`} class="text-sm font-mono font-bold tracking-wide mb-1">
+                                    <span id={`text-current-${fruit.id}`}>0</span>
+                                    <span id={`text-slash-${fruit.id}`}>/</span>
+                                    <span id={`text-target-${fruit.id}`}>10000</span>
+                                </div>
+
+                                <input
+                                        type="number"
+                                        id={`input-${fruit.id}`}
+                                        min="0"
+                                        max="10000"
+                                        placeholder="Nhập số..."
+                                        class="w-full text-center bg-slate-800 text-white text-xs border border-gray-700 rounded px-1.5 py-1 focus:outline-none focus:border-blue-500 font-mono"
+                                />
+                            </div>
+
+                        </div>
+                ))}
+            </div>
+        </main>
+    </div>
+</Layout>
+
+<script define:vars={{ fruits }}>
+    // Hàm cập nhật màu sắc text dựa theo logic số lượng
+    function updateFruitUI(id, value) {
+        const currentVal = parseInt(value) || 0;
+
+        const textCurrent = document.getElementById(`text-current-${id}`);
+        const textSlash = document.getElementById(`text-slash-${id}`);
+        const textTarget = document.getElementById(`text-target-${id}`);
+
+        // Gán số vừa nhập vào text hiển thị trước dấu /
+        textCurrent.innerText = currentVal.toLocaleString();
+
+        if (currentVal >= 10000) {
+            // Khi đạt hoặc vượt quá 10,000 -> Đổi toàn bộ sang màu xanh lá cây mượt mà
+            textCurrent.className = "text-emerald-400";
+            textSlash.className = "text-emerald-400";
+            textTarget.className = "text-emerald-400";
+        } else {
+            // Khi nhỏ hơn 10,000 -> Số trước dấu / màu đỏ, còn lại màu xám trắng mặc định
+            textCurrent.className = "text-red-500";
+            textSlash.className = "text-gray-400";
+            textTarget.className = "text-gray-400";
+        }
+    }
+
+    // Khởi tạo tải dữ liệu cũ đã lưu từ LocalStorage lên giao diện
+    function loadSavedData() {
+        fruits.forEach(fruit => {
+            const savedValue = localStorage.getItem(`fruit_count_${fruit.id}`) || "0";
+
+            // Điền số vào ô input
+            const inputEl = document.getElementById(`input-${fruit.id}`);
+            if (inputEl) inputEl.value = savedValue;
+
+            // Chạy tính toán đổi màu sắc
+            updateFruitUI(fruit.id, savedValue);
+        });
+    }
+
+    // Lắng nghe sự kiện người dùng gõ số vào các ô input
+    fruits.forEach(fruit => {
+        const inputEl = document.getElementById(`input-${fruit.id}`);
+        if (inputEl) {
+            inputEl.addEventListener('input', (e) => {
+                let value = e.target.value;
+
+                // Ngăn chặn số âm
+                if (parseInt(value) < 0) {
+                    value = "0";
+                    e.target.value = "0";
+                }
+
+                // Lưu vào bộ nhớ trình duyệt LocalStorage
+                localStorage.setItem(`fruit_count_${fruit.id}`, value || "0");
+
+                // Cập nhật giao diện tức thì
+                updateFruitUI(fruit.id, value);
+            });
+        }
+    });
+
+    // TÍNH NĂNG XUẤT DATA (EXPORT) RA FILE JSON
+    document.getElementById('export-btn')?.addEventListener('click', () => {
+        const exportData = {};
+
+        // Thu thập toàn bộ dữ liệu đang có trong localStorage của các loại quả
+        fruits.forEach(fruit => {
+            exportData[fruit.id] = localStorage.getItem(`fruit_count_${fruit.id}`) || "0";
+        });
+
+        // Tạo file blob JSON và tải về máy
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportData, null, 2));
+        const downloadAnchor = document.createElement('a');
+
+        // Đặt tên file kèm ngày giờ xuất hiện tại để tránh trùng lặp
+        const dateStr = new Date().toISOString().slice(0, 10);
+        downloadAnchor.setAttribute("href", dataStr);
+        downloadAnchor.setAttribute("download", `ts_fruits_backup_${dateStr}.json`);
+        document.body.appendChild(downloadAnchor);
+        downloadAnchor.click();
+        downloadAnchor.remove();
+    });
+
+    // TÍNH NĂNG NHẬP DATA (IMPORT) VÀ TỰ ĐỘNG SAVE LOCALSTORAGE
+    document.getElementById('import-file')?.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            try {
+                const importedData = JSON.parse(event.target.result);
+
+                // Quét qua các thuộc tính file import, nếu khớp ID trái cây thì nạp thẳng vào LocalStorage
+                fruits.forEach(fruit => {
+                    if (importedData[fruit.id] !== undefined) {
+                        const val = importedData[fruit.id];
+                        localStorage.setItem(`fruit_count_${fruit.id}`, val.toString());
+                    }
+                });
+
+                // Tải lại dữ liệu lên UI lập tức sau khi nạp xong
+                loadSavedData();
+                alert("Nhập dữ liệu và đồng bộ thiết bị thành công!");
+
+                // Reset ô input file để có thể chọn lại chính file đó nếu muốn lần sau
+                e.target.value = '';
+            } catch (err) {
+                alert("Lỗi: Định dạng file sao lưu không hợp lệ, vui lòng kiểm tra lại!");
+            }
+        };
+        reader.readAsText(file);
+    });
+
+    // Xử lý sự kiện nút Reset xóa sạch dữ liệu cũ về 0
+    document.getElementById('reset-btn').addEventListener('click', () => {
+        if (confirm("Bạn có chắc chắn muốn đặt toàn bộ số lượng trái cây về lại 0 không?")) {
+            fruits.forEach(fruit => {
+                localStorage.setItem(`fruit_count_${fruit.id}`, "0");
+            });
+            loadSavedData();
+        }
+    });
+
+    // Kích hoạt chạy ngay khi load trang
+    loadSavedData();
+</script>
+
+<style is:global>
+    /* Ẩn hai nút tăng giảm mũi tên mặc định của input number trông cho gọn giống ảnh gốc */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+    /* Giữ thanh điều hướng mượt */
+    .scrollbar-none::-webkit-scrollbar { display: none; }
+    .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+</style>

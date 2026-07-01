@@ -1,119 +1,128 @@
 ---
 import MainLayout from '../layouts/Layout.astro';
-// Import trực tiếp dữ liệu JSON tại Server-side để truyền xuống Client
-import npcsData from '../data/npcs.json';
+import {Icon} from "astro-icon/components";
 
-// Cắt bớt thuộc tính không cần thiết để giảm tải dung lượng truyền xuống client nếu cần
-const clientNpcs = npcsData.map(npc => ({
-    id: npc.id,
-    name: npc.name,
-    level: npc.level,
-    hp: npc.hp,
-    elementName: npc.elementName,
-    mapName: npc.locations?.[0]?.mapName || "Không rõ"
-}));
+// FancyApps
+import { Image } from "astro:assets";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "../images/*.{jpg,jpeg,png,webp}",
+);
 ---
 
-<MainLayout title="Tra cứu NPC - TS Online">
-    <main class="max-w-7xl mx-auto p-4">
-        <h1 class="text-2xl font-bold mb-4">Danh sách Map</h1>
+<MainLayout title="Map full - TS Online">
+    <div class="container mx-auto px-4 py-8 min-h-[60vh]">
+        <h1 class="text-3xl font-bold mb-8 flex items-center gap-2">
+            <span class="text-primary">
+                <Icon name="lucide:map-pinned" class="w-5 h-5" />
+            </span>
+            Bản Đồ
+        </h1>
 
-        <div class="flex flex-col md:flex-row gap-4 mb-6">
-            <input
-                    type="text"
-                    id="search-input"
-                    placeholder="Nhập tên NPC hoặc ID..."
-                    class="flex-1 bg-slate-800 text-white border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
-            />
-
-            <select
-                    id="element-filter"
-                    class="bg-slate-800 text-white border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
-            >
-                <option value="">Tất cả hệ</option>
-                <option value="Địa">Địa</option>
-                <option value="Thủy">Thủy</option>
-                <option value="Hỏa">Hỏa</option>
-                <option value="Phong">Phong</option>
-            </select>
-        </div>
-
-        <div id="npc-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        </div>
-
-        <div id="no-result" class="text-center text-gray-400 py-8 hidden">
-            Không tìm thấy NPC phù hợp.
-        </div>
-    </main>
+        <main class="max-w-7xl mx-auto px-6 py-12 md:py-20">>
+            <!-- Map Section -->
+            <section class="justified-gallery" id="gallery-container">
+                {
+                    Object.entries(images).map(async ([_path, image], index) => {
+                        const { default: imageData } = await image();
+                        return (
+                                <a
+                                        style={`--width: ${imageData.width}; --height: ${imageData.height};`}
+                                        href={imageData.src}
+                                        target="_blank"
+                                        data-fancybox="gallery"
+                                >
+                                    <Image
+                                            format="webp"
+                                            src={imageData}
+                                            alt=""
+                                            height={1000}
+                                            loading={index < 20 ? "eager" : "lazy"}
+                                    />
+                                </a>
+                        );
+                    })
+                }
+            </section>
+        </main>
+    </div>
 </MainLayout>
 
-<script define:vars={{ clientNpcs }}>
-    const searchInput = document.getElementById('search-input');
-    const elementFilter = document.getElementById('element-filter');
-    const container = document.getElementById('npc-container');
-    const noResult = document.getElementById('no-result');
+<script>
+    import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
 
-    // Hàm loại bỏ dấu tiếng Việt giúp tìm kiếm chính xác hơn (ví dụ: "Trương Giác" -> "truong giac")
-    function removeVietnameseTones(str) {
-        return str.normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .replace(/đ/g, "d").replace(/Đ/g, "D");
-    }
-
-    // Hàm render danh sách NPC ra HTML
-    function renderNPCs(list) {
-        if (list.length === 0) {
-            container.innerHTML = '';
-            noResult.classList.remove('hidden');
-            return;
-        }
-        noResult.classList.add('hidden');
-
-        container.innerHTML = list.map(npc => {
-            // Đổi màu sắc badge theo hệ cho đẹp giống trang gốc
-            let bgEl = 'bg-amber-800'; // Địa
-            if(npc.elementName === 'Thủy') bgEl = 'bg-blue-600';
-            if(npc.elementName === 'Hỏa') bgEl = 'bg-red-600';
-            if(npc.elementName === 'Phong') bgEl = 'bg-green-600';
-
-            return `
-        <div class="bg-slate-800 border border-gray-700 p-4 rounded-lg shadow hover:border-gray-500 transition-all">
-          <div class="flex justify-between items-start">
-            <div>
-              <span class="text-xs text-gray-400">#${npc.id}</span>
-              <h3 class="text-lg font-bold text-yellow-400">${npc.name}</h3>
-            </div>
-            <span class="text-xs px-2 py-1 rounded text-white ${bgEl}">${npc.elementName || 'Vô'}</span>
-          </div>
-          <div class="mt-2 text-sm text-gray-300 grid grid-cols-2 gap-1">
-            <p>Level: <span class="font-semibold text-white">${npc.level}</span></p>
-            <p>HP: <span class="font-semibold text-white">${npc.hp}</span></p>
-          </div>
-          <p class="text-xs text-gray-400 mt-2 truncate">Vị trí: ${npc.mapName}</p>
-        </div>
-      `;
-        }).join('');
-    }
-
-    // Hàm xử lý logic lọc dữ liệu
-    function filterData() {
-        const query = removeVietnameseTones(searchInput.value.toLowerCase().trim());
-        const selectedElement = elementFilter.value;
-
-        const filtered = clientNpcs.filter(npc => {
-            const matchQuery = removeVietnameseTones(npc.name.toLowerCase()).includes(query) || npc.id.toString().includes(query);
-            const matchElement = selectedElement === "" || npc.elementName === selectedElement;
-            return matchQuery && matchElement;
-        });
-
-        // Chỉ hiển thị tối đa 150 kết quả đầu tiên để tránh giật lag trình duyệt khi render DOM lớn
-        renderNPCs(filtered.slice(0, 150));
-    }
-
-    // Lắng nghe sự kiện gõ phím và chọn bộ lọc
-    searchInput.addEventListener('input', filterData);
-    elementFilter.addEventListener('change', filterData);
-
-    // Khởi tạo hiển thị ban đầu
-    renderNPCs(clientNpcs.slice(0, 60));
+    Fancybox.bind("[data-fancybox]", {
+        theme: "auto",
+        mainStyle: {
+            "--f-button-width": "44px",
+            "--f-button-height": "44px",
+            "--f-button-border-radius": "50%",
+            "--f-toolbar-padding": "16px",
+        },
+        Carousel: {
+            Arrows: false,
+            Toolbar: {
+                display: {
+                    left: [],
+                    middle: [],
+                    right: ["close"],
+                },
+            },
+            transition: "slide",
+        },
+    });
 </script>
+
+<style>
+    :root {
+        color-scheme: light dark;
+        --outline: light-dark(#000000, #ffffff);
+    }
+
+    .justified-gallery {
+        --padding: max(2.5vw, 12px);
+        --space: max(2.5vw, 12px);
+        --min-height: clamp(200px, 20vw, 400px);
+
+        padding: var(--padding);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space);
+
+        a {
+            flex-grow: calc(var(--width) * (100000 / var(--height)));
+            flex-basis: calc(var(--min-height) * (var(--width) / var(--height)));
+            aspect-ratio: var(--width) / var(--height);
+            overflow: hidden;
+            opacity: 1;
+            transition: all 0.05s ease-in-out;
+        }
+
+        a img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        a:focus-visible {
+            outline: 3px solid var(--outline);
+            outline-offset: 2px;
+            transform: scale(1.05);
+            z-index: 1;
+            border-radius: 2px;
+            box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        a.hidden {
+            transition: opacity 0.4s ease-in-out;
+            opacity: 0;
+        }
+
+        &::after {
+            content: " ";
+            flex-grow: 1000000000;
+        }
+    }
+</style>

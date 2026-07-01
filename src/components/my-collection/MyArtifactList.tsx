@@ -3,7 +3,7 @@ import { favoriteItems, removeFromFavorites } from '../../store/favoriteStore';
 import { addToCart } from '../../store/cartStore';
 import { toast } from 'sonner';
 
-export default function FavoritesList() {
+export default function MyArtifactList() {
     const favorites = useStore(favoriteItems);
 
     const handleAddToCart = (product: any) => {

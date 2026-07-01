@@ -14,7 +14,7 @@ export interface Audio {
     specs?: { label: string; value: string }[];
 }
 
-export const audios: Audio[] = [
+export const fruits: Audio[] = [
     {
         id: "2",
         name: "Sony WH-1000XM5",

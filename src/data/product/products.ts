@@ -45,12 +45,10 @@ export const products: Product[] = [
         title: "Sony WH-1000XM5",
         price: 399,
         description: "Industry-leading noise cancellation, exceptional sound quality, and crystal-clear hands-free calling. The WH-1000XM5 headphones rewrite the rules for distraction-free listening and ultra-clear call quality.",
-        category: "Audio",
+        category: "Event",
         stock: 12,
         images: [
             "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80"
         ],
         slug: "sony-wh-1000xm5",
         badge: "Bestseller",
