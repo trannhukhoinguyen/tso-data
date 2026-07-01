@@ -1,0 +1,494 @@
+[
+  {
+    "index": 0,
+    "nameId": 21699,
+    "name": "Trác Quận",
+    "targetSceneId": 12001,
+    "targetSceneName": "Cửa thành Trác Quận",
+    "markId": 11804,
+    "pos": {
+      "x": 310,
+      "y": 1530
+    }
+  },
+  {
+    "index": 1,
+    "nameId": 21700,
+    "name": "Bắc Hải",
+    "targetSceneId": 11011,
+    "targetSceneName": "Cửa thành Bắc Hải",
+    "markId": 11805,
+    "pos": {
+      "x": 360,
+      "y": 560
+    }
+  },
+  {
+    "index": 2,
+    "nameId": 21701,
+    "name": "Ng.Thành",
+    "targetSceneId": 12061,
+    "targetSceneName": "Cửa Thành Ng.Thành",
+    "markId": 11806,
+    "pos": {
+      "x": 160,
+      "y": 900
+    }
+  },
+  {
+    "index": 3,
+    "nameId": 21702,
+    "name": "Cự Lộc",
+    "targetSceneId": 12011,
+    "targetSceneName": "Cửa thành Cự Lộc",
+    "markId": 11807,
+    "pos": {
+      "x": 1110,
+      "y": 870
+    }
+  },
+  {
+    "index": 4,
+    "nameId": 21703,
+    "name": "Lạc Dương",
+    "targetSceneId": 13001,
+    "targetSceneName": "Cửa thành Lạc Dương",
+    "markId": 11808,
+    "pos": {
+      "x": 750,
+      "y": 590
+    }
+  },
+  {
+    "index": 5,
+    "nameId": 21704,
+    "name": "Hứa Xương",
+    "targetSceneId": 13011,
+    "targetSceneName": "Cửa thành Hứa Xương",
+    "markId": 11809,
+    "pos": {
+      "x": 270,
+      "y": 590
+    }
+  },
+  {
+    "index": 6,
+    "nameId": 21705,
+    "name": "Trường An",
+    "targetSceneId": 14001,
+    "targetSceneName": "Cửa thành Trường An",
+    "markId": 11810,
+    "pos": {
+      "x": 770,
+      "y": 610
+    }
+  },
+  {
+    "index": 7,
+    "nameId": 21706,
+    "name": "Từ Châu",
+    "targetSceneId": 15001,
+    "targetSceneName": "Cửa thành Từ Châu",
+    "markId": 11811,
+    "pos": {
+      "x": 770,
+      "y": 610
+    }
+  },
+  {
+    "index": 8,
+    "nameId": 21707,
+    "name": "Thọ Xuân",
+    "targetSceneId": 15021,
+    "targetSceneName": "Cửa thành Thọ Xuân",
+    "markId": 11812,
+    "pos": {
+      "x": 270,
+      "y": 590
+    }
+  },
+  {
+    "index": 9,
+    "nameId": 21708,
+    "name": "Kiến Nghiệp",
+    "targetSceneId": 18001,
+    "targetSceneName": "Đại Lộ Kiến Nghiệp",
+    "markId": 11813,
+    "pos": {
+      "x": 330,
+      "y": 1090
+    }
+  },
+  {
+    "index": 10,
+    "nameId": 21709,
+    "name": "Hội Kê",
+    "targetSceneId": 18021,
+    "targetSceneName": "Cửa thành Hội Kê",
+    "markId": 11814,
+    "pos": {
+      "x": 270,
+      "y": 590
+    }
+  },
+  {
+    "index": 11,
+    "nameId": 21710,
+    "name": "Tương Bình",
+    "targetSceneId": 19001,
+    "targetSceneName": "Cửa Thành T.Bình",
+    "markId": 11815,
+    "pos": {
+      "x": 1220,
+      "y": 1100
+    }
+  },
+  {
+    "index": 12,
+    "nameId": 21711,
+    "name": "Th.Đảng",
+    "targetSceneId": 20001,
+    "targetSceneName": "Cửa Thành Th.Đảng",
+    "markId": 11816,
+    "pos": {
+      "x": 770,
+      "y": 610
+    }
+  },
+  {
+    "index": 13,
+    "nameId": 21712,
+    "name": "Tương Dương",
+    "targetSceneId": 21001,
+    "targetSceneName": "Cửa Thành T.Dương",
+    "markId": 11817,
+    "pos": {
+      "x": 770,
+      "y": 610
+    }
+  },
+  {
+    "index": 14,
+    "nameId": 21713,
+    "name": "Giang Lăng",
+    "targetSceneId": 21011,
+    "targetSceneName": "Cửa Thành G.Lăng",
+    "markId": 11818,
+    "pos": {
+      "x": 270,
+      "y": 590
+    }
+  },
+  {
+    "index": 15,
+    "nameId": 21714,
+    "name": "Lâu Bộ",
+    "targetSceneId": 56001,
+    "targetSceneName": "Quế Lâu Bộ",
+    "markId": 12223,
+    "pos": {
+      "x": 1050,
+      "y": 750
+    }
+  },
+  {
+    "index": 16,
+    "nameId": 21715,
+    "name": "Tà Mã Đài",
+    "targetSceneId": 57001,
+    "targetSceneName": "Tà Mã Đài",
+    "markId": 12224,
+    "pos": {
+      "x": 1050,
+      "y": 750
+    }
+  },
+  {
+    "index": 17,
+    "nameId": 21921,
+    "name": "Trường Sa",
+    "targetSceneId": 23001,
+    "targetSceneName": "Cửa thành Trường Sa",
+    "markId": 11819,
+    "pos": {
+      "x": 500,
+      "y": 600
+    }
+  },
+  {
+    "index": 18,
+    "nameId": 21922,
+    "name": "Linh Lăng",
+    "targetSceneId": 23011,
+    "targetSceneName": "Cửa thành Linh Lăng",
+    "markId": 11820,
+    "pos": {
+      "x": 400,
+      "y": 600
+    }
+  },
+  {
+    "index": 19,
+    "nameId": 21949,
+    "name": "Phiên Ngu",
+    "targetSceneId": 26001,
+    "targetSceneName": "Cửa Thành Phiên Ngu",
+    "markId": 11826,
+    "pos": {
+      "x": 400,
+      "y": 600
+    }
+  },
+  {
+    "index": 20,
+    "nameId": 21969,
+    "name": "Y Châu",
+    "targetSceneId": 26011,
+    "targetSceneName": "Cửa thành Y Châu",
+    "markId": 11827,
+    "pos": {
+      "x": 400,
+      "y": 600
+    }
+  },
+  {
+    "index": 21,
+    "nameId": 22020,
+    "name": "Thiên Thủy",
+    "targetSceneId": 24001,
+    "targetSceneName": "Cửa Thành Th.Thủy",
+    "markId": 11821,
+    "pos": {
+      "x": 400,
+      "y": 600
+    }
+  },
+  {
+    "index": 22,
+    "nameId": 22021,
+    "name": "Đôn Hoàng",
+    "targetSceneId": 24011,
+    "targetSceneName": "Cửa thành Đôn Hoàng",
+    "markId": 11822,
+    "pos": {
+      "x": 500,
+      "y": 600
+    }
+  },
+  {
+    "index": 23,
+    "nameId": 22022,
+    "name": "Thành Đô",
+    "targetSceneId": 25001,
+    "targetSceneName": "Cửa thành Thành Đô",
+    "markId": 11823,
+    "pos": {
+      "x": 600,
+      "y": 500
+    }
+  },
+  {
+    "index": 24,
+    "nameId": 22023,
+    "name": "Nam Trịnh",
+    "targetSceneId": 25011,
+    "targetSceneName": "Cửa thành Nam Trịnh",
+    "markId": 11824,
+    "pos": {
+      "x": 550,
+      "y": 550
+    }
+  },
+  {
+    "index": 25,
+    "nameId": 22024,
+    "name": "Bạch Đế",
+    "targetSceneId": 25021,
+    "targetSceneName": "Thành môn Bạch Đế",
+    "markId": 11825,
+    "pos": {
+      "x": 400,
+      "y": 600
+    }
+  },
+  {
+    "index": 26,
+    "nameId": 22025,
+    "name": "Ba Quận",
+    "targetSceneId": 25031,
+    "targetSceneName": "Cửa thành Ba Quận",
+    "markId": 12212,
+    "pos": {
+      "x": 500,
+      "y": 600
+    }
+  },
+  {
+    "index": 27,
+    "nameId": 22125,
+    "name": "Tây Ti",
+    "targetSceneId": 27011,
+    "targetSceneName": "Bộ lạc Tây Tiên Ti",
+    "markId": 12554,
+    "pos": {
+      "x": 1170,
+      "y": 830
+    }
+  },
+  {
+    "index": 28,
+    "nameId": 22126,
+    "name": "Đông Ti",
+    "targetSceneId": 27021,
+    "targetSceneName": "Bộ lạc Đông Tiên Ti",
+    "markId": 12556,
+    "pos": {
+      "x": 150,
+      "y": 830
+    }
+  },
+  {
+    "index": 29,
+    "nameId": 22127,
+    "name": "Ngô Lư",
+    "targetSceneId": 28001,
+    "targetSceneName": "Cửa thành Y Ngô Lư",
+    "markId": 12216,
+    "pos": {
+      "x": 670,
+      "y": 770
+    }
+  },
+  {
+    "index": 30,
+    "nameId": 22128,
+    "name": "Xa Sư",
+    "targetSceneId": 28011,
+    "targetSceneName": "Xa Sư thành môn",
+    "markId": 11828,
+    "pos": {
+      "x": 130,
+      "y": 550
+    }
+  },
+  {
+    "index": 31,
+    "nameId": 22129,
+    "name": "Vu Điền",
+    "targetSceneId": 29011,
+    "targetSceneName": "Cửa thành Vu Điền",
+    "markId": 12217,
+    "pos": {
+      "x": 420,
+      "y": 600
+    }
+  },
+  {
+    "index": 32,
+    "nameId": 22130,
+    "name": "Sơ Lặc",
+    "targetSceneId": 29001,
+    "targetSceneName": "Cửa thành Sơ Lặc",
+    "markId": 11829,
+    "pos": {
+      "x": 620,
+      "y": 400
+    }
+  },
+  {
+    "index": 33,
+    "nameId": 22133,
+    "name": "Uông Tử",
+    "targetSceneId": 60012,
+    "targetSceneName": "Cửa thành Uổng Tử",
+    "markId": 12558,
+    "pos": {
+      "x": 370,
+      "y": 650
+    }
+  },
+  {
+    "index": 34,
+    "nameId": 22134,
+    "name": "Địa Phủ",
+    "targetSceneId": 60032,
+    "targetSceneName": "Cửa thành Địa Phủ",
+    "markId": 12560,
+    "pos": {
+      "x": 750,
+      "y": 530
+    }
+  },
+  {
+    "index": 35,
+    "nameId": 22131,
+    "name": "Dương Minh",
+    "targetSceneId": 61001,
+    "targetSceneName": "Thành Dương Minh",
+    "markId": 11830,
+    "pos": {
+      "x": 460,
+      "y": 700
+    }
+  },
+  {
+    "index": 36,
+    "nameId": 22132,
+    "name": "Phù Nam",
+    "targetSceneId": 61011,
+    "targetSceneName": "Cổng thành Phù Nam",
+    "markId": 11831,
+    "pos": {
+      "x": 940,
+      "y": 750
+    }
+  },
+  {
+    "index": 37,
+    "nameId": 22270,
+    "name": "Kiến Ninh",
+    "targetSceneId": 30001,
+    "targetSceneName": "Kiến Ninh Thành",
+    "markId": 11833,
+    "pos": {
+      "x": 170,
+      "y": 550
+    }
+  },
+  {
+    "index": 38,
+    "nameId": 22271,
+    "name": "Tam Giang",
+    "targetSceneId": 30021,
+    "targetSceneName": "Thành môn Tam Giang",
+    "markId": 11832,
+    "pos": {
+      "x": 730,
+      "y": 570
+    }
+  },
+  {
+    "index": 39,
+    "nameId": 22272,
+    "name": "Bắc Điển",
+    "targetSceneId": 31061,
+    "targetSceneName": "Cửa Thành Bắc Điển",
+    "markId": 12221,
+    "pos": {
+      "x": 750,
+      "y": 550
+    }
+  },
+  {
+    "index": 40,
+    "nameId": 22307,
+    "name": "Nghạch Tế",
+    "targetSceneId": 32001,
+    "targetSceneName": "Cửa Thành Tế Nạp",
+    "markId": 12222,
+    "pos": {
+      "x": 570,
+      "y": 530
+    }
+  }
+]
