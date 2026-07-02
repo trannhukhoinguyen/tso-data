@@ -12,9 +12,14 @@
     "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
-      "@stores/*": ["src/stores/*"],
-      "@lib/*": ["src/lib/*"],
+      "@/data/*": ["src/data/*"],
+      "@/layouts/*": ["src/layouts/*"],
+      "@/stores/*": ["src/stores/*"],
+      "@/lib/*": ["src/lib/*"],
       "@/*": ["src/*"]
-    }
+    },
+    // BỔ SUNG 2 DÒNG NÀY VÀO ĐÂY:
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
   }
 }

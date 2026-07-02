@@ -1368,7 +1368,7 @@
     ]
   },
   {
-    "region": "3. Map Từ Châu",
+    "region": "Kinh Châu - Bắc",
     "map_id": 43,
     "map_name": "Nguyên Khẩu Bến Lò",
     "recommended_level": "Chưa rõ",
@@ -1376,7 +1376,7 @@
     "sub_areas": [
       {
         "area_id": 20043,
-        "area_name": "Nguyên Khẩu Bến Lò",
+        "area_name": "Nguyên Khẩu Bến Lò 15491",
         "monsters": [
           {
             "monster_id": 50080,
@@ -1391,9 +1391,9 @@
     ]
   },
   {
-    "region": "3. Map Từ Châu",
+    "region": "Dương Châu (Giang Đông)",
     "map_id": 44,
-    "map_name": "Rừng Lô Giang",
+    "map_name": "Rừng Lô Giang 15848",
     "recommended_level": "Chưa rõ",
     "connections": [],
     "sub_areas": [
@@ -1402,11 +1402,19 @@
         "area_name": "Rừng Lô Giang",
         "monsters": [
           {
-            "monster_id": 50081,
-            "name": "Tương Binh",
+            "monster_id": 50328,
+            "name": "15843 : Rừng Lô Giang : Tương Binh",
             "element": "Thủy",
             "level": 37,
             "hp": 196,
+            "skills": []
+          },
+          {
+            "monster_id": 50329,
+            "name": "15848 : Rừng Lô Giang : Ng giương buồm",
+            "element": "Thủy",
+            "level": 40,
+            "hp": 946,
             "skills": []
           },
           {
@@ -1418,35 +1426,11 @@
             "skills": []
           },
           {
-            "monster_id": 50083,
-            "name": "Người Giương Buồm",
-            "element": "Thủy",
-            "level": 40,
-            "hp": 946,
-            "skills": []
-          },
-          {
             "monster_id": 50084,
             "name": "Người Lái",
             "element": "Phong",
             "level": 41,
             "hp": 972,
-            "skills": []
-          },
-          {
-            "monster_id": 50578,
-            "name": "TR.Phàm Binh",
-            "element": "Thủy",
-            "level": 39,
-            "hp": 212,
-            "skills": []
-          },
-          {
-            "monster_id": 50579,
-            "name": "Ng giương buồm",
-            "element": "Thủy",
-            "level": 40,
-            "hp": 946,
             "skills": []
           }
         ]
@@ -1518,14 +1502,6 @@
             "element": "Hỏa",
             "level": 33,
             "hp": 155,
-            "skills": []
-          },
-          {
-            "monster_id": 50582,
-            "name": "Gi. Đông Binh",
-            "element": "Phong",
-            "level": 40,
-            "hp": 221,
             "skills": []
           }
         ]
@@ -5089,38 +5065,6 @@
             "skills": []
           },
           {
-            "monster_id": 50324,
-            "name": "Rừng Thạch Đình 15851 : Liệt Võ Binh",
-            "element": "Hỏa",
-            "level": 54,
-            "hp": 296,
-            "skills": []
-          },
-          {
-            "monster_id": 50325,
-            "name": "Rừng Thạch Đinh 15853 : [Nhiễu tr.binh",
-            "element": "Địa",
-            "level": 50,
-            "hp": 1287,
-            "skills": []
-          },
-          {
-            "monster_id": 50326,
-            "name": "Rừng Thạch Đinh 15852 : Thiết Giáp Bin",
-            "element": "Thủy",
-            "level": 52,
-            "hp": 321,
-            "skills": []
-          },
-          {
-            "monster_id": 50327,
-            "name": "Nguyên Khẩu Bến Lò 15491 : Ngự Lâm Quân",
-            "element": "Thủy",
-            "level": 42,
-            "hp": 211,
-            "skills": []
-          },
-          {
             "monster_id": 51000,
             "name": "Y Nhị Thủy Động 15441: Dân Binh",
             "element": "Địa",
@@ -5214,38 +5158,6 @@
             "element": "Hỏa",
             "level": 50,
             "hp": 251,
-            "skills": []
-          },
-          {
-            "monster_id": 51014,
-            "name": "Rừng Thạch Đình 15851: Liệt Võ Binh",
-            "element": "Hỏa",
-            "level": 54,
-            "hp": 296,
-            "skills": []
-          },
-          {
-            "monster_id": 51015,
-            "name": "Rừng Thạch Đinh 15853: [Nhiễu tr.binh",
-            "element": "Địa",
-            "level": 50,
-            "hp": 1287,
-            "skills": []
-          },
-          {
-            "monster_id": 51016,
-            "name": "Rừng Thạch Đinh 15852: Thiết Giáp Bin",
-            "element": "Thủy",
-            "level": 52,
-            "hp": 321,
-            "skills": []
-          },
-          {
-            "monster_id": 51017,
-            "name": "Nguyên Khẩu Bến Lò 15491: Ngự Lâm Quân",
-            "element": "Thủy",
-            "level": 42,
-            "hp": 211,
             "skills": []
           }
         ]
@@ -5381,22 +5293,6 @@
             "element": "Phong",
             "level": 168,
             "hp": 1976,
-            "skills": []
-          },
-          {
-            "monster_id": 51018,
-            "name": "15843: Rừng Lô Giang: Tương Binh",
-            "element": "Thủy",
-            "level": 37,
-            "hp": 196,
-            "skills": []
-          },
-          {
-            "monster_id": 51019,
-            "name": "15848: Rừng Lô Giang: Ng giương buồm",
-            "element": "Thủy",
-            "level": 40,
-            "hp": 946,
             "skills": []
           },
           {
@@ -8038,90 +7934,14 @@
   },
   {
     "region": "3. Map Từ Châu",
-    "map_id": 111,
-    "map_name": "Rừng Thạch Đinh",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20111,
-        "area_name": "Rừng Thạch Đinh",
-        "monsters": [
-          {
-            "monster_id": 50572,
-            "name": "Nhiễu tr.binh",
-            "element": "Địa",
-            "level": 50,
-            "hp": 1287,
-            "skills": []
-          },
-          {
-            "monster_id": 50573,
-            "name": "Trụ giáp quân",
-            "element": "Phong",
-            "level": 49,
-            "hp": 1176,
-            "skills": []
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 112,
-    "map_name": "Rừng Thạch Đinh 15852",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20112,
-        "area_name": "Rừng Thạch Đinh 15852",
-        "monsters": [
-          {
-            "monster_id": 50574,
-            "name": "Thiết Giáp Bin",
-            "element": "Thủy",
-            "level": 52,
-            "hp": 321,
-            "skills": []
-          },
-          {
-            "monster_id": 50575,
-            "name": "Liệt Võ Binh",
-            "element": "Hỏa",
-            "level": 54,
-            "hp": 296,
-            "skills": []
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 113,
-    "map_name": "Map train",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20113,
-        "area_name": "Map train",
-        "monsters": []
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
     "map_id": 114,
-    "map_name": "+Rừng Trung Sơn",
+    "map_name": "Rừng Trung Sơn",
     "recommended_level": "Chưa rõ",
     "connections": [],
     "sub_areas": [
       {
         "area_id": 20114,
-        "area_name": "+Rừng Trung Sơn",
+        "area_name": "Rừng Trung Sơn",
         "monsters": [
           {
             "monster_id": 50669,
@@ -8279,13 +8099,13 @@
   {
     "region": "3. Map Từ Châu",
     "map_id": 118,
-    "map_name": "+Rừng Lầu Song",
+    "map_name": "Rừng Lầu Song",
     "recommended_level": "Chưa rõ",
     "connections": [],
     "sub_areas": [
       {
         "area_id": 20118,
-        "area_name": "+Rừng Lầu Song",
+        "area_name": "Rừng Lầu Song",
         "monsters": [
           {
             "monster_id": 50682,
@@ -8350,13 +8170,13 @@
   {
     "region": "3. Map Từ Châu",
     "map_id": 119,
-    "map_name": "+Rừng Lầu Song 12827",
+    "map_name": "Rừng Lầu Song 12827",
     "recommended_level": "Chưa rõ",
     "connections": [],
     "sub_areas": [
       {
         "area_id": 20119,
-        "area_name": "+Rừng Lầu Song 12827",
+        "area_name": "Rừng Lầu Song 12827",
         "monsters": [
           {
             "monster_id": 50689,
@@ -9496,13 +9316,13 @@
   {
     "region": "3. Map Từ Châu",
     "map_id": 160,
-    "map_name": "+Trại Nhu Tu",
+    "map_name": "Trại Nhu Tu",
     "recommended_level": "Chưa rõ",
     "connections": [],
     "sub_areas": [
       {
         "area_id": 20160,
-        "area_name": "+Trại Nhu Tu",
+        "area_name": "Trại Nhu Tu",
         "monsters": [
           {
             "monster_id": 50757,
@@ -9543,13 +9363,13 @@
   {
     "region": "3. Map Từ Châu",
     "map_id": 161,
-    "map_name": "+Rừng Nai Thuận",
+    "map_name": "Rừng Nai Thuận",
     "recommended_level": "Chưa rõ",
     "connections": [],
     "sub_areas": [
       {
         "area_id": 20161,
-        "area_name": "+Rừng Nai Thuận",
+        "area_name": "Rừng Nai Thuận",
         "monsters": [
           {
             "monster_id": 50759,
@@ -9604,13 +9424,13 @@
   {
     "region": "3. Map Từ Châu",
     "map_id": 163,
-    "map_name": "+Rừng Hiệp Thạch Sơn",
+    "map_name": "Rừng Hiệp Thạch Sơn",
     "recommended_level": "Chưa rõ",
     "connections": [],
     "sub_areas": [
       {
         "area_id": 20163,
-        "area_name": "+Rừng Hiệp Thạch Sơn",
+        "area_name": "Rừng Hiệp Thạch Sơn",
         "monsters": [
           {
             "monster_id": 50765,
@@ -9641,18 +9461,19 @@
     ]
   },
   {
-    "region": "3. Map Từ Châu",
-    "map_id": 164,
-    "map_name": "+Rừng Thạch Đình",
+    "region": "Kinh Châu (Dĩnh Xuyên)",
+    "map_id": 165,
+    "map_name": "Rừng Thạch Đinh",
     "recommended_level": "Chưa rõ",
     "connections": [],
     "sub_areas": [
       {
-        "area_id": 20164,
-        "area_name": "+Rừng Thạch Đình",
+        "area_id": 20165,
+        "warp_id": 15851,
+        "area_name": "Rừng Thạch Đinh 1 - warpId: 15851 (13851)",
         "monsters": [
           {
-            "monster_id": 50768,
+            "monster_id": 50773,
             "name": "Liệt Võ Binh",
             "element": "Hỏa",
             "level": 54,
@@ -9660,7 +9481,7 @@
             "skills": []
           },
           {
-            "monster_id": 50769,
+            "monster_id": 50772,
             "name": "Thiết Giáp Bin",
             "element": "Thủy",
             "level": 52,
@@ -9668,19 +9489,34 @@
             "skills": []
           }
         ]
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 165,
-    "map_name": "+Rừng Thạch Đinh",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
+      },
       {
         "area_id": 20165,
-        "area_name": "+Rừng Thạch Đinh",
+        "warp_id": 15852,
+        "area_name": "Rừng Thạch Đinh 2 - warpId: 15852 (13852)",
+        "monsters": [
+          {
+            "monster_id": 50773,
+            "name": "Liệt Võ Binh",
+            "element": "Hỏa",
+            "level": 54,
+            "hp": 296,
+            "skills": []
+          },
+          {
+            "monster_id": 50772,
+            "name": "Thiết Giáp Bin",
+            "element": "Thủy",
+            "level": 52,
+            "hp": 321,
+            "skills": []
+          }
+        ]
+      },
+      {
+        "area_id": 20165,
+        "warp_id": 15853,
+        "area_name": "Rừng Thạch Đinh 3 - warpId: 15853 (13853)",
         "monsters": [
           {
             "monster_id": 50770,
@@ -9703,179 +9539,7 @@
     ]
   },
   {
-    "region": "3. Map Từ Châu",
-    "map_id": 166,
-    "map_name": "+Rừng Thạch Đinh 15852",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20166,
-        "area_name": "+Rừng Thạch Đinh 15852",
-        "monsters": [
-          {
-            "monster_id": 50772,
-            "name": "Thiết Giáp Bin",
-            "element": "Thủy",
-            "level": 52,
-            "hp": 321,
-            "skills": []
-          },
-          {
-            "monster_id": 50773,
-            "name": "Liệt Võ Binh",
-            "element": "Hỏa",
-            "level": 54,
-            "hp": 296,
-            "skills": []
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 167,
-    "map_name": "+Nguyên Khẩu Bến Lò",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20167,
-        "area_name": "+Nguyên Khẩu Bến Lò",
-        "monsters": [
-          {
-            "monster_id": 50774,
-            "name": "Ngự Lâm Quân",
-            "element": "Thủy",
-            "level": 42,
-            "hp": 211,
-            "skills": []
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 168,
-    "map_name": "+Rừng Lô Giang",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20168,
-        "area_name": "+Rừng Lô Giang",
-        "monsters": [
-          {
-            "monster_id": 50775,
-            "name": "Tương Binh",
-            "element": "Thủy",
-            "level": 37,
-            "hp": 196,
-            "skills": []
-          },
-          {
-            "monster_id": 50776,
-            "name": "TR.Phàm Binh",
-            "element": "Thủy",
-            "level": 39,
-            "hp": 212,
-            "skills": []
-          },
-          {
-            "monster_id": 50777,
-            "name": "Ng giương buồm",
-            "element": "Thủy",
-            "level": 40,
-            "hp": 946,
-            "skills": []
-          },
-          {
-            "monster_id": 50778,
-            "name": "người lái",
-            "element": "Phong",
-            "level": 41,
-            "hp": 972,
-            "skills": []
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 169,
-    "map_name": "+Lô Giang Trại",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20169,
-        "area_name": "+Lô Giang Trại",
-        "monsters": [
-          {
-            "monster_id": 50779,
-            "name": "Tương Binh",
-            "element": "Thủy",
-            "level": 37,
-            "hp": 196,
-            "skills": []
-          },
-          {
-            "monster_id": 50780,
-            "name": "Gi. Đông Binh",
-            "element": "Phong",
-            "level": 40,
-            "hp": 221,
-            "skills": []
-          },
-          {
-            "monster_id": 50781,
-            "name": "Rừng đại phương 1 56811: Binh Thuận Nô",
-            "element": "Phong",
-            "level": 122,
-            "hp": 971,
-            "skills": []
-          },
-          {
-            "monster_id": 50782,
-            "name": "Rừng đại phương 2 56812: Mã Sâm",
-            "element": "Hỏa",
-            "level": 129,
-            "hp": 1013,
-            "skills": []
-          },
-          {
-            "monster_id": 50783,
-            "name": "Rừng Mã Hàn 1 56801: BinhThươngMhàn",
-            "element": "Thủy",
-            "level": 115,
-            "hp": 896,
-            "skills": []
-          },
-          {
-            "monster_id": 50784,
-            "name": "Rừng Mã Hàn 2 56802: Tướng Mã Hàn",
-            "element": "Địa",
-            "level": 120,
-            "hp": 938,
-            "skills": []
-          },
-          {
-            "monster_id": 50785,
-            "name": "Rừng Phùng Lai 1 11821: BồngLaiTTrưởng",
-            "element": "Hỏa",
-            "level": 33,
-            "hp": 155,
-            "skills": []
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
+    "region": "Ích Châu",
     "map_id": 170,
     "map_name": "Thành Ba Quận 25031",
     "recommended_level": "Chưa rõ",
@@ -9915,343 +9579,6 @@
             "element": "Phong",
             "level": 149,
             "hp": 1503,
-            "skills": []
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 171,
-    "map_name": "Nguyệt Động 13842",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20171,
-        "area_name": "Nguyệt Động 13842",
-        "monsters": [
-          {
-            "monster_id": 50967,
-            "name": "Rừng Trực Dương 13831: Binh Lao Sắt",
-            "element": "Thủy",
-            "level": 63,
-            "hp": 376,
-            "skills": []
-          },
-          {
-            "monster_id": 50968,
-            "name": "Rừng Phạm Nam 13821: Binh Giáp Kim",
-            "element": "Địa",
-            "level": 59,
-            "hp": 298,
-            "skills": []
-          },
-          {
-            "monster_id": 50969,
-            "name": "Rừng Phạm Nam 13043: Họ Trúc",
-            "element": "Phong",
-            "level": 59,
-            "hp": 298,
-            "skills": []
-          },
-          {
-            "monster_id": 50970,
-            "name": "Rừng Nhữ Nam 13822: [Song kích đoàn",
-            "element": "Phong",
-            "level": 61,
-            "hp": 1713,
-            "skills": []
-          },
-          {
-            "monster_id": 50971,
-            "name": "Sơn Trại Ngọa Ngưu 13451: SơnBinh KhVàng",
-            "element": "Địa",
-            "level": 70,
-            "hp": 462,
-            "skills": []
-          },
-          {
-            "monster_id": 50972,
-            "name": "Eo Núi Ngọa Ngưu 13453: Quân Sư KhVàng",
-            "element": "Hỏa",
-            "level": 71,
-            "hp": 469,
-            "skills": []
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 172,
-    "map_name": "20529: Sơn Động Tây Hà",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20172,
-        "area_name": "20529: Sơn Động Tây Hà",
-        "monsters": [
-          {
-            "monster_id": 51033,
-            "name": "Rừng Cửu Nguyên 20801: Tr. Thành Vệ",
-            "element": "Hỏa",
-            "level": 86,
-            "hp": 660,
-            "skills": []
-          },
-          {
-            "monster_id": 51034,
-            "name": "Rừng Cửu Nguyên 20802: [Trú bắc quân",
-            "element": "Phong",
-            "level": 80,
-            "hp": 2585,
-            "skills": []
-          },
-          {
-            "monster_id": 51035,
-            "name": "Rừng Hà Đông 20831: Lính Tuần La",
-            "element": "Hỏa",
-            "level": 52,
-            "hp": 262,
-            "skills": []
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 173,
-    "map_name": "Thành Hà Đông 20011",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20173,
-        "area_name": "Thành Hà Đông 20011",
-        "monsters": [
-          {
-            "monster_id": 51036,
-            "name": "Rừng Cao Đô 20821: Trấn Quân Hiệu",
-            "element": "Hỏa",
-            "level": 63,
-            "hp": 382,
-            "skills": []
-          },
-          {
-            "monster_id": 51037,
-            "name": "Rừng Cao Đô 20822: Dã Nhân",
-            "element": "Thủy",
-            "level": 68,
-            "hp": 414,
-            "skills": []
-          },
-          {
-            "monster_id": 51038,
-            "name": "Rừng Đôn Lưu 20811: Khải Giáp Binh",
-            "element": "Thủy",
-            "level": 58,
-            "hp": 293,
-            "skills": []
-          },
-          {
-            "monster_id": 51039,
-            "name": "Rừng Đôn Lưu 20812: Đốn Điền Binh",
-            "element": "Thủy",
-            "level": 62,
-            "hp": 376,
-            "skills": []
-          },
-          {
-            "monster_id": 51040,
-            "name": "Rừng Lâm Bàng 20861: ChủBiênPhòng",
-            "element": "Phong",
-            "level": 75,
-            "hp": 572,
-            "skills": []
-          },
-          {
-            "monster_id": 51041,
-            "name": "Rừng Lâm Phần 20862: [ Tấn tinh binh",
-            "element": "Địa",
-            "level": 75,
-            "hp": 2275,
-            "skills": []
-          },
-          {
-            "monster_id": 51042,
-            "name": "Rừng Bình Dương 20851: Tế Quỷ Thốt",
-            "element": "Địa",
-            "level": 68,
-            "hp": 414,
-            "skills": []
-          },
-          {
-            "monster_id": 51043,
-            "name": "Rừng Bình Dương 20854: [ Xuyênsơn tướng",
-            "element": "Phong",
-            "level": 76,
-            "hp": 2302,
-            "skills": []
-          },
-          {
-            "monster_id": 51044,
-            "name": "Rừng Bình Dương 20853: Quỷ Sư",
-            "element": "Thủy",
-            "level": 73,
-            "hp": 556,
-            "skills": []
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 174,
-    "map_name": "Thành Phù Nam 61011",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20174,
-        "area_name": "Thành Phù Nam 61011",
-        "monsters": []
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 175,
-    "map_name": "Phiêu Ngu Thành 26001",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20175,
-        "area_name": "Phiêu Ngu Thành 26001",
-        "monsters": [
-          {
-            "monster_id": 51104,
-            "name": "Đầm Lầy Cao Lương 26831: Chiểu Quân",
-            "element": "Thủy",
-            "level": 71,
-            "hp": 555,
-            "skills": []
-          },
-          {
-            "monster_id": 51105,
-            "name": "Hầm mỏ Tượng Sơn 26551: Ngân Quảng",
-            "element": "Địa",
-            "level": 120,
-            "hp": 1855,
-            "skills": []
-          },
-          {
-            "monster_id": 51106,
-            "name": "Rừng Hoài An 26841: Thủ Tượng Binh",
-            "element": "Địa",
-            "level": 74,
-            "hp": 642,
-            "skills": []
-          },
-          {
-            "monster_id": 51107,
-            "name": "Rừng Hoài An 26842: Chiến Tượng địa 120 hp7909 Chiến Tượng",
-            "element": "Phong",
-            "level": 120,
-            "hp": 7909,
-            "skills": []
-          },
-          {
-            "monster_id": 51108,
-            "name": "Chiến Tượng",
-            "element": "Hỏa",
-            "level": 120,
-            "hp": 7909,
-            "skills": []
-          },
-          {
-            "monster_id": 51109,
-            "name": "Rừng Quảng Tín 26891 :Đại Phủ Đội",
-            "element": "Thủy",
-            "level": 75,
-            "hp": 583,
-            "skills": []
-          },
-          {
-            "monster_id": 51110,
-            "name": "Rừng Quảng Tín 26892: Thuẫn Vũ Binh",
-            "element": "Phong",
-            "level": 78,
-            "hp": 595,
-            "skills": []
-          },
-          {
-            "monster_id": 51111,
-            "name": "Hầm Mỏ Quế Sơn 26541: Đồng Quảng",
-            "element": "Địa",
-            "level": 117,
-            "hp": 1698,
-            "skills": []
-          },
-          {
-            "monster_id": 51112,
-            "name": "Lệ Phổ vũ lâm: Đại Võ Quan",
-            "element": "Hỏa",
-            "level": 61,
-            "hp": 424,
-            "skills": []
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 176,
-    "map_name": "Tu la địa huyệt 60521",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20176,
-        "area_name": "Tu la địa huyệt 60521",
-        "monsters": [
-          {
-            "monster_id": 51155,
-            "name": "Bình Nguyên Tử Linh 60807: Dị Biến Thi",
-            "element": "Thủy",
-            "level": 101,
-            "hp": 2722,
-            "skills": []
-          },
-          {
-            "monster_id": 51156,
-            "name": "Bình Nguyên Tử Linh 60808: Hủ Lang Nhân",
-            "element": "Địa",
-            "level": 100,
-            "hp": 2683,
-            "skills": []
-          },
-          {
-            "monster_id": 51157,
-            "name": "Bình Nguyên Tử Linh 60809: Cương Linh",
-            "element": "Thủy",
-            "level": 132,
-            "hp": 2352,
-            "skills": []
-          },
-          {
-            "monster_id": 51158,
-            "name": "Bình Nguyên Tử Linh 60810: Cốt Yêu Nữ",
-            "element": "Địa",
-            "level": 131,
-            "hp": 2328,
             "skills": []
           }
         ]
