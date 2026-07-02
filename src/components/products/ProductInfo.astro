@@ -192,7 +192,7 @@ const discountedPrice = product.price * (1 - (product.discount || 0) / 100);
 </div>
 
 <script>
-    import { addToCart } from "../../store/cartStore";
+    import { addToCart } from "../../stores/cartStore";
     import { toast } from "sonner";
 
     function setupPurchaseActions() {

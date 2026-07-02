@@ -136,12 +136,12 @@ const { title, price, images, stock, slug } = Astro.props;
     import { Pagination, Navigation } from "swiper/modules";
     import "swiper/css";
     import "swiper/css/pagination";
-    import { addToCart } from "../../store/cartStore";
+    import { addToCart } from "../../stores/cartStore";
     import {
         toggleFavorite,
         isFavorite,
         favoriteItems,
-    } from "../../store/favoriteStore";
+    } from "../../stores/favoriteStore";
     import { toast } from "sonner";
 
     function initProductComponents() {

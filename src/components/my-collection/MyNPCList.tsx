@@ -1,6 +1,6 @@
 import { useStore } from '@nanostores/react';
 import { favoriteItems, removeFromFavorites } from '../../stores/favoriteStore';
-import { addToCart } from '../../store/cartStore';
+import { addToCart } from '../../stores/cartStore';
 import { toast } from 'sonner';
 
 export default function MyNPCList() {
