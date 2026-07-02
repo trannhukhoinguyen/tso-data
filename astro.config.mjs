@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 import react from '@astrojs/react';
 
@@ -11,6 +12,6 @@ export default defineConfig({
   integrations: [react(), icon()],
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss(), tsconfigPaths()]
   }
 });
