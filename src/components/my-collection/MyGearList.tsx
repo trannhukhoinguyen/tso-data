@@ -1,5 +1,5 @@
 import { useStore } from '@nanostores/react';
-import { myGears, removeFromMyGears } from '../../store/gearStore';
+import { myGears, removeFromMyGears } from '../../stores/gearStore';
 import { addToCart } from '../../store/cartStore';
 import { toast } from 'sonner';
 
