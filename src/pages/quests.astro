@@ -1,11 +1,11 @@
 ---
-import MainLayout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro';
 // Import trực tiếp dữ liệu JSON tại Server-side để truyền xuống Client
 import questJsonUrl from '../data/quests_dump1.json?url';
 import provincesData from '../data/provinces.json?url';
 ---
 
-<MainLayout title="Tra cứu NPC - TS Online">
+<Layout title="Tra cứu NPC - TS Online">
     <main class="max-w-7xl mx-auto p-4">
         <h1 class="text-2xl font-bold mb-4">Danh sách Quest</h1>
 
@@ -37,7 +37,7 @@ import provincesData from '../data/provinces.json?url';
             Không tìm thấy Quest phù hợp.
         </div>
     </main>
-</MainLayout>
+</Layout>
 
 <script define:vars={{ questJsonUrl }}>
     let groupedQuests = [];

@@ -1,10 +1,10 @@
 ---
-import MainLayout from '@/layouts/MainLayout.astro';
+import Layout from '@/layouts/Layout.astro';
 // Import danh sách trái cây từ JSON để render giao diện tự động
 import fruits from '@/data/events/fruits.json';
 ---
 
-<MainLayout title="Sự Kiện Thu Thập Trái Cây">
+<Layout title="Sự Kiện Thu Thập Trái Cây">
     <div class="border-b border-gray-700 bg-slate-900 sticky top-0 z-10 w-full">
         <div class="max-w-7xl mx-auto flex space-x-2 p-4 overflow-x-auto whitespace-nowrap scrollbar-none snap-x">
             <a href="/" class="px-4 py-2 rounded text-gray-300 hover:bg-slate-800 snap-xminor">Bãi Quái</a>
@@ -66,7 +66,7 @@ import fruits from '@/data/events/fruits.json';
             ))}
         </div>
     </main>
-</MainLayout>
+</Layout>
 
 <script>
     import { fruitStore, updateFruitCount, resetAllFruits, importFruitData } from '@/stores/fruitStore';
