@@ -12,6 +12,12 @@ export default defineConfig({
   integrations: [react(), icon()],
 
   vite: {
-    plugins: [tailwindcss(), tsconfigPaths()]
+    plugins: [tailwindcss(), tsconfigPaths()],
+    resolve: {
+      alias: {
+        '../stores/fruitStore': '/src/stores/fruitStore.ts',
+        '@stores/fruitStore': '/src/stores/fruitStore.ts'
+      }
+    }
   }
 });
