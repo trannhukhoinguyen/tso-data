@@ -10257,42 +10257,5 @@
         ]
       }
     ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 177,
-    "map_name": "Diêm La Động",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20177,
-        "area_name": "Diêm La Động",
-        "monsters": []
-      }
-    ]
-  },
-  {
-    "region": "3. Map Từ Châu",
-    "map_id": 178,
-    "map_name": "Tuyết Địa Lô Long 4",
-    "recommended_level": "Chưa rõ",
-    "connections": [],
-    "sub_areas": [
-      {
-        "area_id": 20178,
-        "area_name": "Tuyết Địa Lô Long 4",
-        "monsters": [
-          {
-            "monster_id": 51189,
-            "name": "Người Mọi",
-            "element": "Địa",
-            "level": 34,
-            "hp": 171,
-            "skills": []
-          }
-        ]
-      }
-    ]
   }
 ]

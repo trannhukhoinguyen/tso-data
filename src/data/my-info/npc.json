@@ -1,0 +1,96 @@
+{
+  "mind": [
+    {
+      "id": "41132",
+      "lv": "139",
+      "element": "mind",
+      "hpmax": "908",
+      "spmax": "652",
+      "int": "652",
+      "atk": "652",
+      "def": "652",
+      "agi": "652",
+      "fai": "100",
+      "name": "Tâm Tâm",
+      "reborn": 0
+    }
+  ],
+  "earth": [
+    {
+      "id": "41132",
+      "lv": "139",
+      "element": "earth",
+      "hpmax": "908",
+      "spmax": "652",
+      "int": "652",
+      "atk": "652",
+      "def": "652",
+      "agi": "652",
+      "fai": "100",
+      "name": "Bàng Đức",
+      "reborn": 1
+    }
+  ],
+  "water": [
+    {
+      "id": "41132",
+      "lv": "139",
+      "element": "water",
+      "hpmax": "908",
+      "spmax": "652",
+      "int": "652",
+      "atk": "652",
+      "def": "652",
+      "agi": "652",
+      "fai": "100",
+      "name": "Chân Mật",
+      "reborn": 1
+    }
+  ],
+  "fire": [
+    {
+      "id": "41132",
+      "lv": "139",
+      "element": "fire",
+      "hpmax": "908",
+      "spmax": "652",
+      "int": "652",
+      "atk": "652",
+      "def": "652",
+      "agi": "652",
+      "fai": "100",
+      "name": "Nhạc Tấn",
+      "reborn": 1
+    },
+    {
+      "id": "41132",
+      "lv": "139",
+      "element": "fire",
+      "hpmax": "908",
+      "spmax": "652",
+      "int": "652",
+      "atk": "652",
+      "def": "652",
+      "agi": "652",
+      "fai": "100",
+      "name": "Lữ Bố",
+      "reborn": 1
+    }
+  ],
+  "wind": [
+    {
+      "id": "41132",
+      "lv": "139",
+      "element": "wind",
+      "hpmax": "908",
+      "spmax": "652",
+      "int": "652",
+      "atk": "652",
+      "def": "652",
+      "agi": "652",
+      "fai": "100",
+      "name": "Quan Vũ",
+      "reborn": 0
+    }
+  ]
+}

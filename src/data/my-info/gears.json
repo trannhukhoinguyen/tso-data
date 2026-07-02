@@ -1,0 +1,47 @@
+{
+  "artifacts": [
+    {
+      "set_1": [
+        {
+          "id": 28609,
+          "name": "Item 28609",
+          "type": "weapons",
+          "count": 56,
+          "img": "tsonline_pic\/items\/0.png"
+        },
+        {
+          "id": 26351,
+          "name": "",
+          "type": "hat",
+          "count": 88,
+          "img": "tsonline_pic\/items\/2877.png"
+        },
+        {
+          "id": 26351,
+          "name": "",
+          "type": "hat",
+          "count": 88,
+          "img": "tsonline_pic\/items\/2877.png"
+        }
+      ]
+    },
+    {
+      "set_2": [
+        {
+          "id": 28609,
+          "name": "Item 28609",
+          "type": "weapons",
+          "count": 56,
+          "img": "tsonline_pic\/items\/0.png"
+        },
+        {
+          "id": 26351,
+          "name": "",
+          "type": "hat",
+          "count": 88,
+          "img": "tsonline_pic\/items\/2877.png"
+        }
+      ]
+    }
+  ]
+}

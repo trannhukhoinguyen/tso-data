@@ -9,12 +9,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fancyapps/ui": "^6.1.14",
     "@astrojs/react": "^4.4.2",
+    "@fancyapps/ui": "^6.1.14",
     "@iconify-json/lucide": "^1.2.86",
     "@iconify-json/mdi": "^1.2.3",
     "@nanostores/persistent": "^1.2.0",
     "@nanostores/react": "^1.0.0",
+    "@supabase/supabase-js": "^2.110.0",
     "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",

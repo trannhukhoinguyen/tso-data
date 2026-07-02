@@ -1,9 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MyArtifactList from "../components/my-collection/MyArtifactList";
+import MyGearList from "../components/my-collection/MyGearList";
 ---
 
-<Layout title="My Artifacts | TS Online">
+<Layout title="My Gears | TS Online">
     <div class="container mx-auto px-4 py-8 min-h-[60vh]">
         <h1 class="text-3xl font-bold mb-8 flex items-center gap-2">
             <span class="text-primary">
@@ -19,9 +19,9 @@ import MyArtifactList from "../components/my-collection/MyArtifactList";
                     ></path></svg
                 >
             </span>
-            My Artifacts
+            My Gears
         </h1>
 
-        <MyArtifactList client:only="react" />
+        <MyGearList client:only="react" />
     </div>
 </Layout>
