@@ -71,7 +71,7 @@ import fruits from '../data/events/fruits.json';
 
 <script>
     // Sửa đường dẫn import thành Alias để sửa lỗi "Cannot find module"
-    import { fruitStore, updateFruitCount, resetAllFruits, loadDataFromCloud } from '/src/stores/fruitStore.ts';
+    import { fruitStore, updateFruitCount, resetAllFruits, loadDataFromCloud } from '@stores/fruitStore';
 
     function renderUI(id: string, value: string) {
         const textCurrent = document.getElementById(`text-current-${id}`);
